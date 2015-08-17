@@ -1,0 +1,101 @@
+!SceneAsset
+Id: 122f69fe-ea40-4537-b6c3-5b2025b119b7
+SerializedVersion: 6
+Tags: []
+Hierarchy:
+    RootEntity: 99ec8a8f-9363-44c7-a0f5-5be90a17b1e3
+    Entities:
+        - !Scene
+            Name: Scene
+            Components:
+                SceneComponent.Key:
+                    GraphicsCompositor: !SceneGraphicsCompositorLayers
+                        Cameras: []
+                        Layers:
+                            -   Name: SceneGraphicsLayer
+                                Output: !LocalRenderFrameProvider
+                                    Descriptor:
+                                        Format: HDR
+                                Renderers:
+                                    - !ClearRenderFrameRenderer
+                                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1}
+                                        Output: !CurrentRenderFrameProvider {}
+                                    - !SceneCameraRenderer
+                                        Mode: !CameraRendererModeForward {}
+                                        Camera:
+                                            Index: 0
+                                        Output: !CurrentRenderFrameProvider {}
+                                        Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
+                        Master:
+                            Name: SceneGraphicsLayer
+                            Output: !MasterRenderFrameProvider {}
+                            Renderers:
+                                - !SceneEffectRenderer
+                                    Input: !ImageEffectRendererInput.LayerInput {}
+                                    Effect: !PostProcessingEffects
+                                        Camera:
+                                            Index: 0
+                                        DepthOfField:
+                                            Enabled: false
+                                            DOFAreas: {X: 0.5, Y: 6, Z: 50, W: 200}
+                                        BrightFilter:
+                                            Color: {R: 1, G: 1, B: 1}
+                                        Bloom:
+                                            Distortion: {X: 1, Y: 1}
+                                            Afterimage:
+                                                Enabled: false
+                                        LightStreak:
+                                            Attenuation: 0.7
+                                        LensFlare: {}
+                                        ColorTransforms:
+                                            Transforms:
+                                                - !ToneMap
+                                                    Operator: !ToneMapHejlDawsonOperator {}
+                                                    LuminanceLocalFactor: 0
+                                                - !FilmGrain
+                                                    Enabled: false
+                                                - !Vignetting
+                                                    Enabled: false
+                                                    Color: {R: 0, G: 0, B: 0}
+                                            GammaTransform: {}
+                                        Antialiasing: !FXAAEffect {}
+                                    Output: !CurrentRenderFrameProvider {}
+                    EditorSettings:
+                        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+                        SceneUnit: 1
+                        Camera: {}
+                        Mode: !SceneEditorGraphicsModeHDRSettings
+                            BackgroundColor: {R: 0.0470588244, G: 0.0470588244, B: 0.0470588244}
+                            PostProcessingEffects:
+                                Camera:
+                                    Index: 0
+                                DepthOfField:
+                                    Enabled: false
+                                    DOFAreas: {X: 0.5, Y: 6, Z: 50, W: 200}
+                                BrightFilter:
+                                    Color: {R: 1, G: 1, B: 1}
+                                Bloom:
+                                    Distortion: {X: 1, Y: 1}
+                                    Afterimage:
+                                        Enabled: false
+                                LightStreak:
+                                    Attenuation: 0.7
+                                LensFlare: {}
+                                ColorTransforms:
+                                    Transforms:
+                                        - !ToneMap
+                                            Operator: !ToneMapHejlDawsonOperator {}
+                                            LuminanceLocalFactor: 0
+                                        - !FilmGrain
+                                            Enabled: false
+                                        - !Vignetting
+                                            Enabled: false
+                                            Color: {R: 0, G: 0, B: 0}
+                                    GammaTransform: {}
+                                Antialiasing: !FXAAEffect {}
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 99ec8a8f-9363-44c7-a0f5-5be90a17b1e3

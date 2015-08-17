@@ -1,0 +1,67 @@
+!SpriteSheet
+Id: 60845404-9728-4ad2-a372-5027e31e6fab
+SerializedVersion: 1
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Sprites:
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/ShieldStrength1.gif
+        Name: ShieldStrength1
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/ShieldStrength2.gif
+        Name: ShieldStrength2
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/SwordStrength1.gif
+        Name: SwordStrength1
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/SwordStrength2.gif
+        Name: SwordStrength2
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/ArrowStrength1.gif
+        Name: ArrowStrength1
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/ArrowStrength2.gif
+        Name: ArrowStrength2
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/FarSeeing.gif
+        Name: FarSeeing
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/Healing.gif
+        Name: Healing
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/Invisibility.gif
+        Name: Invisibility
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/RainofFire.gif
+        Name: RainofFire
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/Scorpion.gif
+        Name: Scorpion
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../RawAssets/Races/Humans/Upgrades/WaterElemental.gif
+        Name: Frame 11
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}

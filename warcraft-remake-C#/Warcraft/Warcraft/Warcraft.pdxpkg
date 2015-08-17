@@ -1,0 +1,49 @@
+!Package
+Id: d9f7b6e4-4424-4ed6-8c5e-11f691dc54d2
+Tags: []
+Meta:
+    Name: Warcraft
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: Warcraft
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.2.1-beta
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: Warcraft.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_10_0
+            GameSettingsAsset.DefaultScene: 122f69fe-ea40-4537-b6c3-5b2025b119b7:MainScene
+            Paradox.DisplayOrientation: LandscapeRight
+        ProjectReferences:
+            -   Id: 018c8338-7950-4863-b930-7e53979c6024
+                Location: Warcraft.Game/Warcraft.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: Direct3D11
+        ProjectReferences:
+            -   Id: 9b585212-d071-447d-a494-f4ce4daca54d
+                Location: Warcraft.Windows/Warcraft.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
