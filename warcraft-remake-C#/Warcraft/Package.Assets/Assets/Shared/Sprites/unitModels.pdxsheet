@@ -1,0 +1,57 @@
+!SpriteSheet
+Id: 18d05e10-0fc8-4fce-b52c-bbcc3539c40a
+SerializedVersion: 1
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Sprites:
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Peasant.gif
+        Name: Peasant
+        TextureRegion: {X: 0, Y: 0, Width: 24, Height: 24}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Footman.gif
+        Name: Footman
+        TextureRegion: {X: 0, Y: 0, Width: 38, Height: 36}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Archer.gif
+        Name: Archer
+        TextureRegion: {X: 0, Y: 0, Width: 28, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Knight.gif
+        Name: Knight
+        TextureRegion: {X: 0, Y: 0, Width: 34, Height: 56}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Wounded.gif
+        Name: Wounded
+        TextureRegion: {X: 0, Y: 0, Width: 48, Height: 24}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Catapult.gif
+        Name: Catapult
+        TextureRegion: {X: 0, Y: 0, Width: 41, Height: 51}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Cleric.gif
+        Name: Cleric
+        TextureRegion: {X: 0, Y: 0, Width: 26, Height: 30}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Conjurer.gif
+        Name: Conjurer
+        TextureRegion: {X: 0, Y: 0, Width: 24, Height: 38}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/Scorpion.gif
+        Name: Scorpion
+        TextureRegion: {X: 0, Y: 0, Width: 34, Height: 46}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../../../Warcraft/RawAssets/Races/Humans/Models/WaterElemental.gif
+        Name: WaterElemental
+        TextureRegion: {X: 0, Y: 0, Width: 56, Height: 64}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}

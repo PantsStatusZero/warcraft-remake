@@ -1,0 +1,3118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SiliconStudio.Paradox</name>
+    </assembly>
+    <members>
+        <member name="T:SiliconStudio.ParadoxVersion">
+            <summary>
+            Internal version used to identify Paradox version.
+            </summary>
+            <remarks>
+            Note: When modifying the version here, it must be modified also in the Paradox.pdxpkg 
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.ParadoxVersion.CurrentAssemblyAsText">
+            <summary>
+            The .NET current assembly version as text, not including pre-release (alpha, beta...) information.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.ParadoxVersion.CurrentAsText">
+            <summary>
+            The Store current version as text, including pre-release (alpha, beta...) information
+            </summary>
+            <remarks>
+            Version number as described in http://docs.nuget.org/docs/reference/versioning
+            When using pre-release (alpha, beta, rc...etc.) and because the order of the release is in alphabetical order,
+            please use a double digit like alpha00 alpha01...etc. in order to make sure that we will follow the correct
+            order for the versions.
+            </remarks>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.AssemblyEffectKeysAttribute">
+            <summary>
+            Assembly attribute used to mark assembly that has been preprocessed using the <see cref="!:ParameterKeyProcessor"/>.
+            Assemblies without this attribute will have all of their type members tagged with <see cref="!:EffectKeysAttribute"/> scanned for <see cref="T:SiliconStudio.Paradox.Rendering.ParameterKey"/>.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.EffectParameterExtensions">
+            <summary>
+            Various extension methods to quickly get and set values in EffectVariable.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterUpdaterDefinition">
+            <summary>
+            Describes the expected parameters when using a <see cref="T:SiliconStudio.Paradox.Rendering.ParameterCollectionGroup"/>.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterCollectionGroup">
+            <summary>
+            Merges and filters parameters coming from multiple <see cref="T:SiliconStudio.Paradox.Rendering.ParameterCollection"/>, using the first collection as key-mapping reference.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollectionGroup.#ctor(SiliconStudio.Paradox.Rendering.ParameterCollection[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Rendering.ParameterCollectionGroup"/> class.
+            </summary>
+            <param name="parameterCollections">The parameter collections.</param>
+            <exception cref="T:System.ArgumentNullException">parameterCollections</exception>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.ColorExtensions">
+            <summary>
+            Extension class for <see cref="T:SiliconStudio.Core.Mathematics.Color"/>
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.ColorExtensions.WithAlpha(SiliconStudio.Core.Mathematics.Color,System.Byte)">
+            <summary>
+            Create a copy of the color with the provided alpha value.
+            </summary>
+            <param name="color">The color to take as reference</param>
+            <param name="alpha">The alpha value of the new color</param>
+            <returns>The color with the provided alpha value</returns>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.CompareFunction">
+            <summary>
+            Comparison options.
+            </summary>
+            <remarks>
+            A comparison option determines whether how the runtime compares source (new) data against destination (existing) data before storing the new data. 
+            The comparison option is declared in a description before an object is created. 
+            The API allows you to set a comparison option for a depth-stencil buffer (see <see cref="!:IDepthStencilState"/>), depth-stencil operations, or sampler state (see <see cref="!:SamplerState"/>).
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.CompareFunction.Never">
+            <summary>
+            Never pass the comparison.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.CompareFunction.Less">
+            <summary>
+            If the source data is less than the destination data, the comparison passes.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.CompareFunction.Equal">
+            <summary>
+            If the source data is equal to the destination data, the comparison passes.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.CompareFunction.LessEqual">
+            <summary>
+            If the source data is less than or equal to the destination data, the comparison passes.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.CompareFunction.Greater">
+            <summary>
+            If the source data is greater than the destination data, the comparison passes.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.CompareFunction.NotEqual">
+            <summary>
+            If the source data is not equal to the destination data, the comparison passes.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.CompareFunction.GreaterEqual">
+            <summary>
+            If the source data is greater than or equal to the destination data, the comparison passes.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.CompareFunction.Always">
+            <summary>
+            Always pass the comparison.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DataBox">
+            <summary>
+            Provides access to data organized in 3D.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DataBox.Empty">
+            <summary>
+            An empty DataBox.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DataBox.#ctor(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.DataBox"/> struct.
+            </summary>
+            <param name="datapointer">The datapointer.</param>
+            <param name="rowPitch">The row pitch.</param>
+            <param name="slicePitch">The slice pitch.</param>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DataBox.DataPointer">
+            <summary>
+            Pointer to the data.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DataBox.RowPitch">
+            <summary>
+            Gets the number of bytes per row.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DataBox.SlicePitch">
+            <summary>
+            Gets the number of bytes per slice (for a 3D texture, a slice is a 2D image)
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DataBox.op_Equality(SiliconStudio.Paradox.Graphics.DataBox,SiliconStudio.Paradox.Graphics.DataBox)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DataBox.op_Inequality(SiliconStudio.Paradox.Graphics.DataBox,SiliconStudio.Paradox.Graphics.DataBox)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.DataBox.IsEmpty">
+            <summary>
+            Gets a value indicating whether this instance is empty.
+            </summary>
+            <value><c>true</c> if this instance is empty; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DataRectangle">
+            <summary>
+            Provides a pointer to 2D data.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DataRectangle.#ctor(System.IntPtr,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.DataRectangle"/> class.
+            </summary>
+            <param name="dataPointer">The pointer to the data.</param>
+            <param name="pitch">The stride.</param>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DataRectangle.DataPointer">
+            <summary>
+            Gets or sets a pointer to the data.
+            </summary>
+            <value>
+            The stream.
+            </value>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DataRectangle.Pitch">
+            <summary>
+            Gets or sets the number of bytes per row.
+            </summary>
+            <value>
+            The row pitch in bytes.
+            </value>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.MagicHeader">
+            <summary>
+            Magic code to identify DDS header
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DDS.DDSPixelFormat">
+            <summary>
+            Internal structure used to describe a DDS pixel format.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DDS.DDSPixelFormat.#ctor(SiliconStudio.Paradox.Graphics.DDS.PixelFormatFlags,System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.DDS.DDSPixelFormat"/> struct.
+            </summary>
+            <param name="flags">The flags.</param>
+            <param name="fourCC">The four CC.</param>
+            <param name="rgbBitCount">The RGB bit count.</param>
+            <param name="rBitMask">The r bit mask.</param>
+            <param name="gBitMask">The g bit mask.</param>
+            <param name="bBitMask">The b bit mask.</param>
+            <param name="aBitMask">A bit mask.</param>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DDS.PixelFormatFlags">
+            <summary>
+            PixelFormat flags.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DDS.HeaderFlags">
+            <summary>
+            DDS Header flags.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DDS.SurfaceFlags">
+            <summary>
+            DDS Surface flags.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DDS.CubemapFlags">
+            <summary>
+            DDS Cubemap flags.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DDS.ResourceDimension">
+            <summary>	
+            <p>Identifies the type of resource being used.</p>	
+            </summary>	
+            <remarks>	
+            <p>This enumeration is used in <strong><see cref="!:SharpDX.Direct3D11.Resource.GetDimension"/></strong>. </p>	
+            </remarks>	
+            <!-- Failed to insert some or all of included XML --><include file=".\..\Documentation\CodeComments.xml" path="/comments/comment[@id='D3D11_RESOURCE_DIMENSION']/*"/>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceDimension.Unknown">
+            <summary>	
+            <dd> <p>Resource is of unknown type.</p> </dd>	
+            </summary>	
+            <!-- Failed to insert some or all of included XML --><include file=".\..\Documentation\CodeComments.xml" path="/comments/comment[@id='D3D11_RESOURCE_DIMENSION_UNKNOWN']/*"/>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceDimension.Buffer">
+            <summary>	
+            <dd> <p>Resource is a buffer.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceDimension.Texture1D">
+            <summary>	
+            <dd> <p>Resource is a 1D texture.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceDimension.Texture2D">
+            <summary>	
+            <dd> <p>Resource is a 2D texture.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceDimension.Texture3D">
+            <summary>	
+            <dd> <p>Resource is a 3D texture.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags">
+            <summary>	
+            <p>Identifies options for resources.</p>	
+            </summary>	
+            <remarks>	
+            <p>This enumeration is used in <strong><see cref="!:SharpDX.Direct3D11.BufferDescription"/></strong>, <strong><see cref="!:SharpDX.Direct3D11.Texture1DDescription"/></strong>, <strong><see cref="!:SharpDX.Direct3D11.Texture2DDescription"/></strong>, <strong><see cref="!:SharpDX.Direct3D11.Texture3DDescription"/></strong>. </p><p>These flags can be combined by bitwise OR.</p>	
+            </remarks>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.GenerateMipMaps">
+            <summary>	
+            <dd> <p>Enables MIP map generation by using <strong><see cref="!:SharpDX.Direct3D11.DeviceContext.GenerateMips"/></strong> on a texture resource. The resource must be created with the <strong>bind flags</strong> that specify that the resource is a render target and a shader resource.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.Shared">
+            <summary>	
+            <dd> <p>Enables resource data sharing between two or more Direct3D devices. The only resources that can be shared are 2D non-mipmapped textures.</p> <p><strong><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.Shared"/></strong> and <strong><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.SharedKeyedmutex"/></strong> are mutually exclusive.</p> <p><strong>WARP</strong> and <strong>REF</strong> devices do not support shared resources. If you try to create a resource with this flag on either a <strong>WARP</strong> or <strong>REF</strong> device,  the create method will return an <strong>E_OUTOFMEMORY</strong> error code.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.TextureCube">
+            <summary>	
+            <dd> <p>Sets a resource to be a cube texture created from a Texture2DArray that contains 6 textures.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.DrawindirectArgs">
+            <summary>	
+            <dd> <p>Enables instancing of GPU-generated content.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.BufferAllowRawViews">
+            <summary>	
+            <dd> <p>Enables a resource as a byte address buffer.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.BufferStructured">
+            <summary>	
+            <dd> <p>Enables a resource as a structured buffer.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.ResourceClamp">
+            <summary>	
+            <dd> <p>Enables a resource with MIP map clamping for use with <strong><see cref="!:SharpDX.Direct3D11.DeviceContext.SetMinimumLod"/></strong>.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.SharedKeyedmutex">
+            <summary>	
+            <dd> <p>Enables the resource  to be synchronized by using the <strong><see cref="!:SharpDX.DXGI.KeyedMutex.Acquire"/></strong> and  <strong><see cref="!:SharpDX.DXGI.KeyedMutex.Release"/></strong> APIs.  The following Direct3D?11 resource creation  APIs, that take <strong><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags"/></strong> parameters, have been extended to support the new flag.</p> <ul> <li> <strong><see cref="!:SharpDX.Direct3D11.Device.CreateTexture1D"/></strong> </li> <li> <strong><see cref="!:SharpDX.Direct3D11.Device.CreateTexture2D"/></strong> </li> <li> <strong><see cref="!:SharpDX.Direct3D11.Device.CreateTexture3D"/></strong> </li> <li> <strong><see cref="!:SharpDX.Direct3D11.Device.CreateBuffer"/></strong> </li> </ul> <p>If you call any of these  methods with the <strong><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.SharedKeyedmutex"/></strong> flag set, the interface returned will support the <strong><see cref="!:SharpDX.DXGI.KeyedMutex"/></strong> interface.  You can retrieve a reference to the <strong><see cref="!:SharpDX.DXGI.KeyedMutex"/></strong> interface from the resource by using <strong>IUnknown::QueryInterface</strong>.  The <strong><see cref="!:SharpDX.DXGI.KeyedMutex"/></strong> interface implements the <strong><see cref="!:SharpDX.DXGI.KeyedMutex.Acquire"/></strong> and <strong><see cref="!:SharpDX.DXGI.KeyedMutex.Release"/></strong> APIs to synchronize access to the surface. The device that creates the surface, and any other device that opens the surface  by using <strong>OpenSharedResource</strong>, must call <strong><see cref="!:SharpDX.DXGI.KeyedMutex.Acquire"/></strong> before they issue any rendering commands to the surface. When those devices finish rendering, they must call <strong><see cref="!:SharpDX.DXGI.KeyedMutex.Release"/></strong>.</p> <p><strong> <see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.Shared"/></strong> and <strong><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.SharedKeyedmutex"/></strong> are mutually exclusive.</p> <p><strong>WARP</strong> and <strong>REF</strong> devices do not support shared resources. If you try to create a resource with this flag on either a <strong>WARP</strong> or <strong>REF</strong> device,  the create method will return an <strong>E_OUTOFMEMORY</strong> error code.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.GdiCompatible">
+            <summary>	
+            <dd> <p>Enables a resource compatible with GDI. You must set the <strong><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.GdiCompatible"/></strong> flag  on surfaces that you use with GDI. Setting the <strong><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.GdiCompatible"/></strong> flag allows GDI rendering on the surface via <strong><see cref="!:SharpDX.DXGI.Surface1.GetDC"/></strong>.	
+            </p> <p>Consider the following programming tips for using <see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.GdiCompatible"/> when you create a texture or use that texture in a swap chain:</p> <ul> <li><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.SharedKeyedmutex"/> and <see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.GdiCompatible"/> are mutually exclusive. Therefore, do not use them together.</li> <li><see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.ResourceClamp"/> and <see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.GdiCompatible"/> are mutually exclusive. Therefore, do not use them together.</li> <li>You must bind the texture as a render target for the output-merger stage. For example, set the <see cref="!:SharpDX.Direct3D11.BindFlags.RenderTarget"/> flag in the <strong>BindFlags</strong> member of the <strong><see cref="!:SharpDX.Direct3D11.Texture2DDescription"/></strong> structure.</li> <li>You must set the maximum number of MIP map levels to 1. For example, set the <strong>MipLevels</strong> member of the <strong><see cref="!:SharpDX.Direct3D11.Texture2DDescription"/></strong> structure to 1.</li> <li>You must specify that the texture requires read and write access by the GPU. For example, set the <strong>Usage</strong> member of the <strong><see cref="!:SharpDX.Direct3D11.Texture2DDescription"/></strong> structure to <see cref="!:SharpDX.Direct3D11.ResourceUsage.Default"/>.</li> <li> <p>You must set the texture format to one of the following types. </p> <ul> <li><see cref="!:SharpDX.DXGI.Format.B8G8R8A8_UNorm"/>	
+            </li> <li><see cref="!:SharpDX.DXGI.Format.B8G8R8A8_Typeless"/></li> <li><see cref="!:SharpDX.DXGI.Format.B8G8R8A8_UNorm_SRgb"/>	
+            </li> </ul>For example, set the <strong>Format</strong> member of the <strong><see cref="!:SharpDX.Direct3D11.Texture2DDescription"/></strong> structure to one of these  types.</li> <li>You cannot use <see cref="!:SharpDX.Direct3D11.ResourceOptionFlags.GdiCompatible"/> with multisampling. Therefore, set the <strong>Count</strong> member of the <strong><see cref="!:SharpDX.DXGI.SampleDescription"/></strong> structure to 1. Then, set the <strong>SampleDesc</strong> member of the <strong><see cref="!:SharpDX.Direct3D11.Texture2DDescription"/></strong> structure to this <strong><see cref="!:SharpDX.DXGI.SampleDescription"/></strong> structure.</li> </ul> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DDS.ResourceOptionFlags.None">
+            <summary>	
+            None.	
+            </summary>	
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DDSFlags">
+            <summary>
+            Flags used by <see cref="M:SiliconStudio.Paradox.Graphics.DDSHelper.LoadFromDDSMemory(System.IntPtr,System.Int32,System.Boolean,System.Nullable{System.Runtime.InteropServices.GCHandle})"/>.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DDSHelper.DecodeDDSHeader(System.IntPtr,System.Int32,SiliconStudio.Paradox.Graphics.DDSFlags,SiliconStudio.Paradox.Graphics.ImageDescription@,SiliconStudio.Paradox.Graphics.DDSHelper.ConversionFlags@)">
+            <summary>
+            Decodes DDS header including optional DX10 extended header
+            </summary>
+            <param name="headerPtr">Pointer to the DDS header.</param>
+            <param name="size">Size of the DDS content.</param>
+            <param name="flags">Flags used for decoding the DDS header.</param>
+            <param name="description">Output texture description.</param>
+            <param name="convFlags">Output conversion flags.</param>
+            <exception cref="T:System.ArgumentException">If the argument headerPtr is null</exception>
+            <exception cref="T:System.InvalidOperationException">If the DDS header contains invalid datas.</exception>
+            <returns>True if the decoding is successfull, false if this is not a DDS header.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DDSHelper.EncodeDDSHeader(SiliconStudio.Paradox.Graphics.ImageDescription,SiliconStudio.Paradox.Graphics.DDSFlags,System.IntPtr,System.Int32,System.Int32@)">
+            <summary>
+            Encodes DDS file header (magic value, header, optional DX10 extended header)
+            </summary>
+            <param name="flags">Flags used for decoding the DDS header.</param>
+            <param name="description">Output texture description.</param>
+            <param name="pDestination">Pointer to the DDS output header. Can be set to IntPtr.Zero to calculated the required bytes.</param>
+            <param name="maxsize">The maximum size of the destination buffer.</param>
+            <param name="required">Output the number of bytes required to write the DDS header.</param>
+            <exception cref="T:System.ArgumentException">If the argument headerPtr is null</exception>
+            <exception cref="T:System.InvalidOperationException">If the DDS header contains invalid datas.</exception>
+            <returns>True if the decoding is successfull, false if this is not a DDS header.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SiliconStudio.Paradox.Graphics.DDSHelper.LegacyExpandScanline(System.IntPtr,System.Int32,SiliconStudio.Paradox.Graphics.PixelFormat,System.IntPtr,System.Int32,SiliconStudio.Paradox.Graphics.DDSHelper.TEXP_LEGACY_FORMAT,System.UInt32*,SiliconStudio.Paradox.Graphics.DDSHelper.ScanlineFlags)" -->
+        <member name="M:SiliconStudio.Paradox.Graphics.DDSHelper.LoadFromDDSMemory(System.IntPtr,System.Int32,System.Boolean,System.Nullable{System.Runtime.InteropServices.GCHandle})">
+            <summary>
+            Load a DDS file in memory
+            </summary>
+            <param name="pSource"></param>
+            <param name="size"></param>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DDSHelper.CreateImageFromDDS(System.IntPtr,System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.ImageDescription,SiliconStudio.Paradox.Graphics.Image.PitchFlags,SiliconStudio.Paradox.Graphics.DDSHelper.ConversionFlags,System.UInt32*,System.Nullable{System.Runtime.InteropServices.GCHandle})">
+            <summary>
+            Converts or copies image data from pPixels into scratch image data
+            </summary>
+            <param name="pDDS"></param>
+            <param name="offset"></param>
+            <param name="size"></param>
+            <param name="metadata"></param>
+            <param name="cpFlags"></param>
+            <param name="convFlags"></param>
+            <param name="pal8"></param>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DDSHelper.ExpandScanline(System.IntPtr,System.Int32,System.IntPtr,System.Int32,SiliconStudio.Paradox.Graphics.PixelFormat,SiliconStudio.Paradox.Graphics.DDSHelper.ScanlineFlags)">
+            <summary>
+            Converts an image row with optional clearing of alpha value to 1.0
+            </summary>
+            <param name="pDestination"></param>
+            <param name="outSize"></param>
+            <param name="pSource"></param>
+            <param name="inSize"></param>
+            <param name="inFormat"></param>
+            <param name="flags"></param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DDSHelper.CopyScanline(System.IntPtr,System.Int32,System.IntPtr,System.Int32,SiliconStudio.Paradox.Graphics.PixelFormat,SiliconStudio.Paradox.Graphics.DDSHelper.ScanlineFlags)">
+            <summary>
+            Copies an image row with optional clearing of alpha value to 1.0.
+            </summary>
+            <remarks>
+            This method can be used in place as well, otherwise copies the image row unmodified.
+            </remarks>
+            <param name="pDestination">The destination buffer.</param>
+            <param name="outSize">The destination size.</param>
+            <param name="pSource">The source buffer.</param>
+            <param name="inSize">The source size.</param>
+            <param name="format">The <see cref="!:Format"/> of the source scanline.</param>
+            <param name="flags">Scanline flags used when copying the scanline.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DDSHelper.SwizzleScanline(System.IntPtr,System.Int32,System.IntPtr,System.Int32,SiliconStudio.Paradox.Graphics.PixelFormat,SiliconStudio.Paradox.Graphics.DDSHelper.ScanlineFlags)">
+            <summary>
+            Swizzles (RGB &lt;-&gt; BGR) an image row with optional clearing of alpha value to 1.0.
+            </summary>
+            <param name="pDestination">The destination buffer.</param>
+            <param name="outSize">The destination size.</param>
+            <param name="pSource">The source buffer.</param>
+            <param name="inSize">The source size.</param>
+            <param name="format">The <see cref="!:Format"/> of the source scanline.</param>
+            <param name="flags">Scanline flags used when copying the scanline.</param>
+            <remarks>
+            This method can be used in place as well, otherwise copies the image row unmodified.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.DDSHelper.LegacyMap.#ctor(SiliconStudio.Paradox.Graphics.PixelFormat,SiliconStudio.Paradox.Graphics.DDSHelper.ConversionFlags,SiliconStudio.Paradox.Graphics.DDS.DDSPixelFormat)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.DDSHelper.LegacyMap"/> struct.
+            </summary>
+            <param name="format">The format.</param>
+            <param name="conversionFlags">The conversion flags.</param>
+            <param name="pixelFormat">The pixel format.</param>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.DisplayOrientation">
+            <summary>
+            Describes the orientation of the display.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DisplayOrientation.Default">
+            <summary>
+            The default value for the orientation.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DisplayOrientation.LandscapeLeft">
+            <summary>
+            Displays in landscape mode to the left.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DisplayOrientation.LandscapeRight">
+            <summary>
+            Displays in landscape mode to the right.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.DisplayOrientation.Portrait">
+            <summary>
+            Displays in portrait mode.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.Font.Glyph">
+            <summary>
+            Description of a glyph (a single character)
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Font.Glyph.Character">
+            <summary>
+            Unicode codepoint.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Font.Glyph.Subrect">
+            <summary>
+            Glyph image data (may only use a portion of a larger bitmap).
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Font.Glyph.Offset">
+            <summary>
+            Layout information.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Font.Glyph.XAdvance">
+            <summary>
+            Advance X
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Font.Glyph.BitmapIndex">
+            <summary>
+            Index of the bitmap. 
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.Font.Kerning">
+            <summary>
+            Describes kerning information.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Font.Kerning.First">
+            <summary>
+            Unicode for the 1st character.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Font.Kerning.Second">
+            <summary>
+            Unicode for the 2nd character.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Font.Kerning.Offset">
+            <summary>
+            X Offsets in pixels to apply between the 1st and 2nd character.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.FourCC">
+            <summary>
+            A FourCC descriptor.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.FourCC"/> struct.
+            </summary>
+            <param name="fourCC">The fourCC value as a string .</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.#ctor(System.Char,System.Char,System.Char,System.Char)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.FourCC"/> struct.
+            </summary>
+            <param name="byte1">The byte1.</param>
+            <param name="byte2">The byte2.</param>
+            <param name="byte3">The byte3.</param>
+            <param name="byte4">The byte4.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.FourCC"/> struct.
+            </summary>
+            <param name="fourCC">The fourCC value as an uint.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.FourCC"/> struct.
+            </summary>
+            <param name="fourCC">The fourCC value as an int.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.op_Implicit(SiliconStudio.Paradox.FourCC)~System.UInt32">
+            <summary>
+            Performs an implicit conversion from <see cref="!:SharpDX.Multimedia.FourCC"/> to <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="d">The d.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.op_Implicit(SiliconStudio.Paradox.FourCC)~System.Int32">
+            <summary>
+            Performs an implicit conversion from <see cref="!:SharpDX.Multimedia.FourCC"/> to <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="d">The d.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.op_Implicit(System.UInt32)~SiliconStudio.Paradox.FourCC">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int32"/> to <see cref="!:SharpDX.Multimedia.FourCC"/>.
+            </summary>
+            <param name="d">The d.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.op_Implicit(System.Int32)~SiliconStudio.Paradox.FourCC">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int32"/> to <see cref="!:SharpDX.Multimedia.FourCC"/>.
+            </summary>
+            <param name="d">The d.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.op_Implicit(SiliconStudio.Paradox.FourCC)~System.String">
+            <summary>
+            Performs an implicit conversion from <see cref="!:SharpDX.Multimedia.FourCC"/> to <see cref="T:System.String"/>.
+            </summary>
+            <param name="d">The d.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.FourCC.op_Implicit(System.String)~SiliconStudio.Paradox.FourCC">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.String"/> to <see cref="!:SharpDX.Multimedia.FourCC"/>.
+            </summary>
+            <param name="d">The d.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.GraphicsPlatform">
+            <summary>
+            The graphics platform.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsPlatform.Direct3D11">
+            <summary>
+            HLSL Direct3D Shader.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsPlatform.OpenGL">
+            <summary>
+            GLSL OpenGL Shader.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsPlatform.OpenGLES">
+            <summary>
+            GLSL OpenGL ES Shader.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.GraphicsProfile">
+            <summary>
+            Identifies the set of supported devices for the demo based on device capabilities.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsProfile.Level_9_1">
+            <summary>
+            DirectX9 support (HLSL 3.0)
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsProfile.Level_9_2">
+            <summary>
+            DirectX9 support (HLSL 3.0)
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsProfile.Level_9_3">
+            <summary>
+            DirectX9 support (HLSL 3.0)
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsProfile.Level_10_0">
+            <summary>
+            DirectX10 support (HLSL 4.0, Geometry Shader)
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsProfile.Level_10_1">
+            <summary>
+            DirectX10.1 support (HLSL 4.1, Geometry Shader)
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsProfile.Level_11_0">
+            <summary>
+            DirectX11 support (HLSL 5.0, Compute Shaders, Domain/Hull Shaders)
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsProfile.Level_11_1">
+            <summary>
+            DirectX11.1 support (HLSL 5.0, Compute Shaders, Domain/Hull Shaders)
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.GraphicsProfile.Level_11_2">
+            <summary>
+            DirectX11.2 support (HLSL 5.0, Compute Shaders, Domain/Hull Shaders)
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.Image">
+            <summary>
+            Provides method to instantiate an image 1D/2D/3D supporting TextureArray and mipmaps on the CPU or to load/save an image from the disk.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Image.pixelBuffers">
+            <summary>
+            Pixel buffers.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Image.pixelBufferArray">
+            <summary>
+            Provides access to all pixel buffers.
+            </summary>
+            <remarks>
+            For Texture3D, each z slice of the Texture3D has a pixelBufferArray * by the number of mipmaps.
+            For other textures, there is Description.MipLevels * Description.ArraySize pixel buffers.
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Image.totalSizeInBytes">
+            <summary>
+            Gets the total number of bytes occupied by this image in memory.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Image.buffer">
+            <summary>
+            Pointer to the buffer.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Image.bufferIsDisposable">
+            <summary>
+            True if the buffer must be disposed.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Image.handle">
+            <summary>
+            Handke != null if the buffer is a pinned managed object on the LOH (Large Object Heap).
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.Image.Description">
+            <summary>
+            Description of this image.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.#ctor(SiliconStudio.Paradox.Graphics.ImageDescription,System.IntPtr,System.Int32,System.Nullable{System.Runtime.InteropServices.GCHandle},System.Boolean,SiliconStudio.Paradox.Graphics.Image.PitchFlags,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.Image"/> class.
+            </summary>
+            <param name="description">The image description.</param>
+            <param name="dataPointer">The pointer to the data buffer.</param>
+            <param name="offset">The offset from the beginning of the data buffer.</param>
+            <param name="handle">The handle (optionnal).</param>
+            <param name="bufferIsDisposable">if set to <c>true</c> [buffer is disposable].</param>
+            <exception cref="T:System.InvalidOperationException">If the format is invalid, or width/height/depth/arraysize is invalid with respect to the dimension.</exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.GetMipMapDescription(System.Int32)">
+            <summary>
+            Gets the mipmap description of this instance for the specified mipmap level.
+            </summary>
+            <param name="mipmap">The mipmap.</param>
+            <returns>A description of a particular mipmap for this texture.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.GetPixelBuffer(System.Int32,System.Int32)">
+            <summary>
+            Gets the pixel buffer for the specified array/z slice and mipmap level.
+            </summary>
+            <param name="arrayOrZSliceIndex">For 3D image, the parameter is the Z slice, otherwise it is an index into the texture array.</param>
+            <param name="mipmap">The mipmap.</param>
+            <returns>A <see cref="F:SiliconStudio.Paradox.Graphics.Image.pixelBufferArray"/>.</returns>
+            <exception cref="T:System.ArgumentException">If arrayOrZSliceIndex or mipmap are out of range.</exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.GetPixelBuffer(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets the pixel buffer for the specified array/z slice and mipmap level.
+            </summary>
+            <param name="arrayIndex">Index into the texture array. Must be set to 0 for 3D images.</param>
+            <param name="zIndex">Z index for 3D image. Must be set to 0 for all 1D/2D images.</param>
+            <param name="mipmap">The mipmap.</param>
+            <returns>A <see cref="F:SiliconStudio.Paradox.Graphics.Image.pixelBufferArray"/>.</returns>
+            <exception cref="T:System.ArgumentException">If arrayIndex, zIndex or mipmap are out of range.</exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.Register(SiliconStudio.Paradox.Graphics.ImageFileType,SiliconStudio.Paradox.Graphics.Image.ImageLoadDelegate,SiliconStudio.Paradox.Graphics.Image.ImageSaveDelegate)">
+            <summary>
+            Registers a loader/saver for a specified image file type.
+            </summary>
+            <param name="type">The file type (use integer and explicit casting to <see cref="T:SiliconStudio.Paradox.Graphics.ImageFileType"/> to register other fileformat.</param>
+            <param name="loader">The loader delegate (can be null).</param>
+            <param name="saver">The saver delegate (can be null).</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.ToDataBox">
+            <summary>
+            Gets the databox from this image.
+            </summary>
+            <returns>The databox of this image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.ComputeDataBox">
+            <summary>
+            Gets the databox from this image.
+            </summary>
+            <returns>The databox of this image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New(SiliconStudio.Paradox.Graphics.ImageDescription)">
+            <summary>
+            Creates a new instance of <see cref="T:SiliconStudio.Paradox.Graphics.Image"/> from an image description.
+            </summary>
+            <param name="description">The image description.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New1D(System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount,SiliconStudio.Paradox.Graphics.PixelFormat,System.Int32)">
+            <summary>
+            Creates a new instance of a 1D <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="mipMapCount">The mip map count.</param>
+            <param name="format">The format.</param>
+            <param name="arraySize">Size of the array.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New2D(System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount,SiliconStudio.Paradox.Graphics.PixelFormat,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of a 2D <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="mipMapCount">The mip map count.</param>
+            <param name="format">The format.</param>
+            <param name="arraySize">Size of the array.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.NewCube(System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount,SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Creates a new instance of a Cube <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="mipMapCount">The mip map count.</param>
+            <param name="format">The format.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New3D(System.Int32,System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount,SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Creates a new instance of a 3D <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="depth">The depth.</param>
+            <param name="mipMapCount">The mip map count.</param>
+            <param name="format">The format.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New(SiliconStudio.Paradox.Graphics.ImageDescription,System.IntPtr)">
+            <summary>
+            Creates a new instance of <see cref="T:SiliconStudio.Paradox.Graphics.Image"/> from an image description.
+            </summary>
+            <param name="description">The image description.</param>
+            <param name="dataPointer">Pointer to an existing buffer.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New(SiliconStudio.Paradox.Graphics.ImageDescription,System.IntPtr,System.Int32,System.Nullable{System.Runtime.InteropServices.GCHandle},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.Image"/> class.
+            </summary>
+            <param name="description">The image description.</param>
+            <param name="dataPointer">The pointer to the data buffer.</param>
+            <param name="offset">The offset from the beginning of the data buffer.</param>
+            <param name="handle">The handle (optionnal).</param>
+            <param name="bufferIsDisposable">if set to <c>true</c> [buffer is disposable].</param>
+            <exception cref="T:System.InvalidOperationException">If the format is invalid, or width/height/depth/arraysize is invalid with respect to the dimension.</exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New1D(System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount,SiliconStudio.Paradox.Graphics.PixelFormat,System.Int32,System.IntPtr)">
+            <summary>
+            Creates a new instance of a 1D <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="mipMapCount">The mip map count.</param>
+            <param name="format">The format.</param>
+            <param name="arraySize">Size of the array.</param>
+            <param name="dataPointer">Pointer to an existing buffer.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New2D(System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount,SiliconStudio.Paradox.Graphics.PixelFormat,System.Int32,System.IntPtr,System.Int32)">
+            <summary>
+            Creates a new instance of a 2D <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="mipMapCount">The mip map count.</param>
+            <param name="format">The format.</param>
+            <param name="arraySize">Size of the array.</param>
+            <param name="dataPointer">Pointer to an existing buffer.</param>
+            <param name="rowStride">Specify a specific rowStride, only valid when mipMapCount == 1 and pixel format is not compressed.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.NewCube(System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount,SiliconStudio.Paradox.Graphics.PixelFormat,System.IntPtr)">
+            <summary>
+            Creates a new instance of a Cube <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="mipMapCount">The mip map count.</param>
+            <param name="format">The format.</param>
+            <param name="dataPointer">Pointer to an existing buffer.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.New3D(System.Int32,System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount,SiliconStudio.Paradox.Graphics.PixelFormat,System.IntPtr)">
+            <summary>
+            Creates a new instance of a 3D <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="depth">The depth.</param>
+            <param name="mipMapCount">The mip map count.</param>
+            <param name="format">The format.</param>
+            <param name="dataPointer">Pointer to an existing buffer.</param>
+            <returns>A new image.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.Load(SiliconStudio.Paradox.Graphics.DataPointer,System.Boolean)">
+            <summary>
+            Loads an image from an unmanaged memory pointer.
+            </summary>
+            <param name="dataBuffer">Pointer to an unmanaged memory. If <see cref="!:makeACopy"/> is false, this buffer must be allocated with <see cref="M:SiliconStudio.Core.Utilities.AllocateMemory(System.Int32,System.Int32)"/>.</param>
+            <param name="makeACopy">True to copy the content of the buffer to a new allocated buffer, false otherwhise.</param>
+            <returns>An new image.</returns>
+            <remarks>If <see cref="!:makeACopy"/> is set to false, the returned image is now the holder of the unmanaged pointer and will release it on Dispose. </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.Load(System.IntPtr,System.Int32,System.Boolean)">
+            <summary>
+            Loads an image from an unmanaged memory pointer.
+            </summary>
+            <param name="dataPointer">Pointer to an unmanaged memory. If <see cref="!:makeACopy"/> is false, this buffer must be allocated with <see cref="M:SiliconStudio.Core.Utilities.AllocateMemory(System.Int32,System.Int32)"/>.</param>
+            <param name="dataSize">Size of the unmanaged buffer.</param>
+            <param name="makeACopy">True to copy the content of the buffer to a new allocated buffer, false otherwise.</param>
+            <returns>An new image.</returns>
+            <remarks>If <see cref="!:makeACopy"/> is set to false, the returned image is now the holder of the unmanaged pointer and will release it on Dispose. </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.Load(System.Byte[])">
+            <summary>
+            Loads an image from a managed buffer.
+            </summary>
+            <param name="buffer">Reference to a managed buffer.</param>
+            <returns>An new image.</returns>
+            <remarks>This method support the following format: <c>dds, bmp, jpg, png, gif, tiff, wmp, tga</c>.</remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.Load(System.IO.Stream)">
+            <summary>
+            Loads the specified image from a stream.
+            </summary>
+            <param name="imageStream">The image stream.</param>
+            <returns>An new image.</returns>
+            <remarks>This method support the following format: <c>dds, bmp, jpg, png, gif, tiff, wmp, tga</c>.</remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.Save(System.IO.Stream,SiliconStudio.Paradox.Graphics.ImageFileType)">
+            <summary>
+            Saves this instance to a stream.
+            </summary>
+            <param name="imageStream">The destination stream.</param>
+            <param name="fileType">Specify the output format.</param>
+            <remarks>This method support the following format: <c>dds, bmp, jpg, png, gif, tiff, wmp, tga</c>.</remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.CalculateMipLevels(System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount)">
+            <summary>
+            Calculates the number of miplevels for a Texture 1D.
+            </summary>
+            <param name="width">The width of the texture.</param>
+            <param name="mipLevels">A <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/>, set to true to calculates all mipmaps, to false to calculate only 1 miplevel, or &gt; 1 to calculate a specific amount of levels.</param>
+            <returns>The number of miplevels.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.CalculateMipLevels(System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount)">
+            <summary>
+            Calculates the number of miplevels for a Texture 2D.
+            </summary>
+            <param name="width">The width of the texture.</param>
+            <param name="height">The height of the texture.</param>
+            <param name="mipLevels">A <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/>, set to true to calculates all mipmaps, to false to calculate only 1 miplevel, or &gt; 1 to calculate a specific amount of levels.</param>
+            <returns>The number of miplevels.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.CalculateMipLevels(System.Int32,System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.MipMapCount)">
+            <summary>
+            Calculates the number of miplevels for a Texture 2D.
+            </summary>
+            <param name="width">The width of the texture.</param>
+            <param name="height">The height of the texture.</param>
+            <param name="depth">The depth of the texture.</param>
+            <param name="mipLevels">A <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/>, set to true to calculates all mipmaps, to false to calculate only 1 miplevel, or &gt; 1 to calculate a specific amount of levels.</param>
+            <returns>The number of miplevels.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.Load(System.IntPtr,System.Int32,System.Boolean,System.Nullable{System.Runtime.InteropServices.GCHandle})">
+            <summary>
+            Loads an image from the specified pointer.
+            </summary>
+            <param name="dataPointer">The data pointer.</param>
+            <param name="dataSize">Size of the data.</param>
+            <param name="makeACopy">if set to <c>true</c> [make A copy].</param>
+            <param name="handle">The handle.</param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.Save(SiliconStudio.Paradox.Graphics.PixelBuffer[],System.Int32,SiliconStudio.Paradox.Graphics.ImageDescription,System.IO.Stream,SiliconStudio.Paradox.Graphics.ImageFileType)">
+            <summary>
+            Saves this instance to a stream.
+            </summary>
+            <param name="pixelBuffers">The buffers to save.</param>
+            <param name="count">The number of buffers to save.</param>
+            <param name="description">Global description of the buffer.</param>
+            <param name="imageStream">The destination stream.</param>
+            <param name="fileType">Specify the output format.</param>
+            <remarks>This method support the following format: <c>dds, bmp, jpg, png, gif, tiff, wmp, tga</c>.</remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.CalculateImageArray(SiliconStudio.Paradox.Graphics.ImageDescription,SiliconStudio.Paradox.Graphics.Image.PitchFlags,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Determines number of image array entries and pixel size.
+            </summary>
+            <param name="imageDesc">Description of the image to create.</param>
+            <param name="pitchFlags">Pitch flags.</param>
+            <param name="bufferCount">Output number of mipmap.</param>
+            <param name="pixelSizeInBytes">Output total size to allocate pixel buffers for all images.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.Image.SetupImageArray(System.IntPtr,System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.ImageDescription,SiliconStudio.Paradox.Graphics.Image.PitchFlags,SiliconStudio.Paradox.Graphics.PixelBuffer[])">
+            <summary>
+            Allocates PixelBuffers 
+            </summary>
+            <param name="buffer"></param>
+            <param name="pixelSize"></param>
+            <param name="imageDesc"></param>
+            <param name="pitchFlags"></param>
+            <param name="output"></param>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.Image.DataPointer">
+            <summary>
+            Gets a pointer to the image buffer in memory.
+            </summary>
+            <value>A pointer to the image buffer in memory.</value>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.Image.PixelBuffer">
+            <summary>
+            Provides access to all pixel buffers.
+            </summary>
+            <remarks>
+            For Texture3D, each z slice of the Texture3D has a pixelBufferArray * by the number of mipmaps.
+            For other textures, there is Description.MipLevels * Description.ArraySize pixel buffers.
+            </remarks>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.Image.TotalSizeInBytes">
+            <summary>
+            Gets the total number of bytes occupied by this image in memory.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.ImageDescription">
+            <summary>
+            A description for <see cref="T:SiliconStudio.Paradox.Graphics.Image"/>.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageDescription.Dimension">
+            <summary>
+            The dimension of a texture.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageDescription.Width">
+            <summary>	
+            <dd> <p>Texture width (in texels). The  range is from 1 to <see cref="!:SharpDX.Direct3D11.Resource.MaximumTexture1DSize"/> (16384). However, the range is actually constrained by the feature level at which you create the rendering device. For more information about restrictions, see Remarks.</p> </dd>	
+            </summary>	
+            <remarks>
+            This field is valid for all textures: <see cref="!:Texture1D"/>, <see cref="!:Texture2D"/>, <see cref="!:Texture3D"/> and <see cref="!:TextureCube"/>.
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageDescription.Height">
+            <summary>	
+            <dd> <p>Texture height (in texels). The  range is from 1 to <see cref="!:SharpDX.Direct3D11.Resource.MaximumTexture3DSize"/> (2048). However, the range is actually constrained by the feature level at which you create the rendering device. For more information about restrictions, see Remarks.</p> </dd>	
+            </summary>	
+            <remarks>
+            This field is only valid for <see cref="!:Texture2D"/>, <see cref="!:Texture3D"/> and <see cref="!:TextureCube"/>.
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageDescription.Depth">
+            <summary>	
+            <dd> <p>Texture depth (in texels). The  range is from 1 to <see cref="!:SharpDX.Direct3D11.Resource.MaximumTexture3DSize"/> (2048). However, the range is actually constrained by the feature level at which you create the rendering device. For more information about restrictions, see Remarks.</p> </dd>	
+            </summary>	
+            <remarks>
+            This field is only valid for <see cref="!:Texture3D"/>.
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageDescription.ArraySize">
+            <summary>	
+            <dd> <p>Number of textures in the array. The  range is from 1 to <see cref="!:SharpDX.Direct3D11.Resource.MaximumTexture1DArraySize"/> (2048). However, the range is actually constrained by the feature level at which you create the rendering device. For more information about restrictions, see Remarks.</p> </dd>	
+            </summary>	
+            <remarks>
+            This field is only valid for <see cref="!:Texture1D"/>, <see cref="!:Texture2D"/> and <see cref="!:TextureCube"/>
+            </remarks>
+            <remarks>
+            This field is only valid for textures: <see cref="!:Texture1D"/>, <see cref="!:Texture2D"/> and <see cref="!:TextureCube"/>.
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageDescription.MipLevels">
+            <summary>	
+            <dd> <p>The maximum number of mipmap levels in the texture. See the remarks in <strong><see cref="!:SharpDX.Direct3D11.ShaderResourceViewDescription.Texture1DResource"/></strong>. Use 1 for a multisampled texture; or 0 to generate a full set of subtextures.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageDescription.Format">
+            <summary>	
+            <dd> <p>Texture format (see <strong><see cref="!:SharpDX.DXGI.Format"/></strong>).</p> </dd>	
+            </summary>	
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.ImageFileType">
+            <summary>
+            Image file format used by <see cref="!:Image.Save(string,SiliconStudio.Paradox.Graphics.ImageFileType)"/>
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Paradox">
+            <summary>
+            Paradox image file.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Dds">
+            <summary>
+            A DDS file.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Png">
+            <summary>
+            A PNG file.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Gif">
+            <summary>
+            A GIF file.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Jpg">
+            <summary>
+            A JPG file.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Bmp">
+            <summary>
+            A BMP file.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Tiff">
+            <summary>
+            A TIFF file.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Wmp">
+            <summary>
+            A WMP file.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.ImageFileType.Tga">
+            <summary>
+            A TGA File.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.MipMapCount">
+            <summary>
+            A simple wrapper to specify number of mipmaps.
+             Set to true to specify all mipmaps or sets an integer value >= 1
+            to specify the exact number of mipmaps.
+            </summary>
+            <remarks>
+            This structure use implicit conversion:
+            <ul>
+            <li>Set to <c>true</c> to specify all mipmaps.</li>
+            <li>Set to <c>false</c> to specify a single mipmap.</li>
+            <li>Set to an integer value >=1 to specify an exact count of mipmaps.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapCount.Auto">
+            <summary>
+            Automatic mipmap level based on texture size.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapCount.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/> struct.
+            </summary>
+            <param name="allMipMaps">if set to <c>true</c> generates all mip maps.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapCount.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/> struct.
+            </summary>
+            <param name="count">The count.</param>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapCount.Count">
+            <summary>
+            Number of mipmaps.
+            </summary>
+            <remarks>
+            Zero(0) means generate all mipmaps. One(1) generates a single mipmap... etc.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapCount.op_Implicit(SiliconStudio.Paradox.Graphics.MipMapCount)~System.Boolean">
+            <summary>
+            Performs an explicit conversion from <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/> to <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="mipMap">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapCount.op_Implicit(System.Boolean)~SiliconStudio.Paradox.Graphics.MipMapCount">
+            <summary>
+            Performs an explicit conversion from <see cref="T:System.Boolean"/> to <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/>.
+            </summary>
+            <param name="mipMapAll">True to generate all mipmaps, false to use a single mipmap.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapCount.op_Implicit(SiliconStudio.Paradox.Graphics.MipMapCount)~System.Int32">
+            <summary>
+            Performs an explicit conversion from <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/> to <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="mipMap">The value.</param>
+            <returns>The count of mipmap (0 means all mipmaps).</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapCount.op_Implicit(System.Int32)~SiliconStudio.Paradox.Graphics.MipMapCount">
+            <summary>
+            Performs an explicit conversion from <see cref="T:System.Int32"/> to <see cref="T:SiliconStudio.Paradox.Graphics.MipMapCount"/>.
+            </summary>
+            <param name="mipMapCount">True to generate all mipmaps, false to use a single mipmap.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.MipMapDescription">
+            <summary>
+            Describes a mipmap.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapDescription.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.MipMapDescription"/> class.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="depth">The depth.</param>
+            <param name="rowStride">The row stride.</param>
+            <param name="depthStride">The depth stride.</param>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapDescription.Width">
+            <summary>
+            Width of this mipmap.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapDescription.Height">
+            <summary>
+            Height of this mipmap.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapDescription.WidthPacked">
+            <summary>
+            Width of this mipmap.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapDescription.HeightPacked">
+            <summary>
+            Height of this mipmap.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapDescription.Depth">
+            <summary>
+            Depth of this mipmap.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapDescription.RowStride">
+            <summary>
+            RowStride of this mipmap (number of bytes per row).
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapDescription.DepthStride">
+            <summary>
+            DepthStride of this mipmap (number of bytes per depth slice).
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.MipMapDescription.MipmapSize">
+            <summary>
+            Size in bytes of this whole mipmap.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapDescription.op_Equality(SiliconStudio.Paradox.Graphics.MipMapDescription,SiliconStudio.Paradox.Graphics.MipMapDescription)">
+            <summary>
+            Implements the ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.MipMapDescription.op_Inequality(SiliconStudio.Paradox.Graphics.MipMapDescription,SiliconStudio.Paradox.Graphics.MipMapDescription)">
+            <summary>
+            Implements the !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.PixelBuffer">
+            <summary>
+            An unmanaged buffer of pixels.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelBuffer.isStrictRowStride">
+            <summary>
+            True when RowStride == sizeof(pixelformat) * width
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.#ctor(System.Int32,System.Int32,SiliconStudio.Paradox.Graphics.PixelFormat,System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.PixelBuffer"/> struct.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="format">The format.</param>
+            <param name="rowStride">The row pitch.</param>
+            <param name="bufferStride">The slice pitch.</param>
+            <param name="dataPointer">The pixels.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.CopyTo(SiliconStudio.Paradox.Graphics.PixelBuffer)">
+            <summary>
+            Copies this pixel buffer to a destination pixel buffer.
+            </summary>
+            <param name="pixelBuffer">The destination pixel buffer.</param>
+            <remarks>
+            The destination pixel buffer must have exactly the same dimensions (width, height) and format than this instance.
+            Destination buffer can have different row stride.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.Save(System.IO.Stream,SiliconStudio.Paradox.Graphics.ImageFileType)">
+            <summary>
+            Saves this pixel buffer to a stream.
+            </summary>
+            <param name="imageStream">The destination stream.</param>
+            <param name="fileType">Specify the output format.</param>
+            <remarks>This method support the following format: <c>dds, bmp, jpg, png, gif, tiff, wmp, tga</c>.</remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.GetPixel``1(System.Int32,System.Int32)">
+            <summary>
+            Gets the pixel value at a specified position.
+            </summary>
+            <typeparam name="T">Type of the pixel data</typeparam>
+            <param name="x">The x-coordinate.</param>
+            <param name="y">The y-coordinate.</param>
+            <returns>The pixel value.</returns>
+            <remarks>
+            Caution, this method doesn't check bounding.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.SetPixel``1(System.Int32,System.Int32,``0)">
+            <summary>
+            Gets the pixel value at a specified position.
+            </summary>
+            <typeparam name="T">Type of the pixel data</typeparam>
+            <param name="x">The x-coordinate.</param>
+            <param name="y">The y-coordinate.</param>
+            <param name="value">The pixel value.</param>
+            <remarks>
+            Caution, this method doesn't check bounding.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.GetPixels``1(System.Int32)">
+            <summary>
+            Gets scanline pixels from the buffer.
+            </summary>
+            <typeparam name="T">Type of the pixel data</typeparam>
+            <param name="yOffset">The y line offset.</param>
+            <returns>Scanline pixels from the buffer</returns>
+            <exception cref="T:System.ArgumentException">If the sizeof(T) is an invalid size</exception>
+            <remarks>
+            This method is working on a row basis. The <see cref="!:yOffset"/> is specifying the first row to get 
+            the pixels from.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.GetPixels``1(``0[],System.Int32)">
+            <summary>
+            Gets scanline pixels from the buffer.
+            </summary>
+            <typeparam name="T">Type of the pixel data</typeparam>
+            <param name="pixels">An allocated scanline pixel buffer</param>
+            <param name="yOffset">The y line offset.</param>
+            <returns>Scanline pixels from the buffer</returns>
+            <exception cref="T:System.ArgumentException">If the sizeof(T) is an invalid size</exception>
+            <remarks>
+            This method is working on a row basis. The <see cref="!:yOffset"/> is specifying the first row to get 
+            the pixels from.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.GetPixels``1(``0[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets scanline pixels from the buffer.
+            </summary>
+            <typeparam name="T">Type of the pixel data</typeparam>
+            <param name="pixels">An allocated scanline pixel buffer</param>
+            <param name="yOffset">The y line offset.</param>
+            <param name="pixelIndex">Offset into the destination <see cref="!:pixels"/> buffer.</param>
+            <param name="pixelCount">Number of pixels to write into the destination <see cref="!:pixels"/> buffer.</param>
+            <exception cref="T:System.ArgumentException">If the sizeof(T) is an invalid size</exception>
+            <remarks>
+            This method is working on a row basis. The <see cref="!:yOffset"/> is specifying the first row to get 
+            the pixels from.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.SetPixels``1(``0[],System.Int32)">
+            <summary>
+            Sets scanline pixels to the buffer.
+            </summary>
+            <typeparam name="T">Type of the pixel data</typeparam>
+            <param name="sourcePixels">Source pixel buffer</param>
+            <param name="yOffset">The y line offset.</param>
+            <exception cref="T:System.ArgumentException">If the sizeof(T) is an invalid size</exception>
+            <remarks>
+            This method is working on a row basis. The <see cref="!:yOffset"/> is specifying the first row to get 
+            the pixels from.
+            </remarks>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelBuffer.SetPixels``1(``0[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets scanline pixels to the buffer.
+            </summary>
+            <typeparam name="T">Type of the pixel data</typeparam>
+            <param name="sourcePixels">Source pixel buffer</param>
+            <param name="yOffset">The y line offset.</param>
+            <param name="pixelIndex">Offset into the source <see cref="!:sourcePixels"/> buffer.</param>
+            <param name="pixelCount">Number of pixels to write into the source <see cref="!:sourcePixels"/> buffer.</param>
+            <exception cref="T:System.ArgumentException">If the sizeof(T) is an invalid size</exception>
+            <remarks>
+            This method is working on a row basis. The <see cref="!:yOffset"/> is specifying the first row to get 
+            the pixels from.
+            </remarks>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBuffer.Width">
+            <summary>
+            Gets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBuffer.Height">
+            <summary>
+            Gets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBuffer.Format">
+            <summary>
+            Gets the format.
+            </summary>
+            <value>The format.</value>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBuffer.PixelSize">
+            <summary>
+            Gets the pixel size in bytes.
+            </summary>
+            <value>The pixel size in bytes.</value>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBuffer.RowStride">
+            <summary>
+            Gets the row stride in number of bytes.
+            </summary>
+            <value>The row stride in number of bytes.</value>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBuffer.BufferStride">
+            <summary>
+            Gets the total size in bytes of this pixel buffer.
+            </summary>
+            <value>The size in bytes of the pixel buffer.</value>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBuffer.DataPointer">
+            <summary>
+            Gets the pointer to the pixel buffer.
+            </summary>
+            <value>The pointer to the pixel buffer.</value>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.PixelBufferArray">
+            <summary>
+            Used by <see cref="T:SiliconStudio.Paradox.Graphics.Image"/> to provide a selector to a <see cref="T:SiliconStudio.Paradox.Graphics.PixelBuffer"/>.
+            </summary>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBufferArray.Item(System.Int32)">
+            <summary>
+            Gets the pixel buffer.
+            </summary>
+            <returns>A <see cref="T:SiliconStudio.Paradox.Graphics.PixelBuffer"/>.</returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBufferArray.Count">
+            <summary>
+            Gets the total number of pixel buffers.
+            </summary>
+            <returns>The total number of pixel buffers.</returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBufferArray.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets the pixel buffer for the specified array/z slice and mipmap level.
+            </summary>
+            <param name="arrayOrDepthSlice">For 3D image, the parameter is the Z slice, otherwise it is an index into the texture array.</param>
+            <param name="mipIndex">The mip map slice index.</param>
+            <returns>A <see cref="T:SiliconStudio.Paradox.Graphics.PixelBuffer"/>.</returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.PixelBufferArray.Item(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets the pixel buffer for the specified array/z slice and mipmap level.
+            </summary>
+            <param name="arrayIndex">Index into the texture array. Must be set to 0 for 3D images.</param>
+            <param name="zIndex">Z index for 3D image. Must be set to 0 for all 1D/2D images.</param>
+            <param name="mipIndex">The mip map slice index.</param>
+            <returns>A <see cref="T:SiliconStudio.Paradox.Graphics.PixelBuffer"/>.</returns>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.PixelFormat">
+            <summary>
+            Defines various types of pixel formats.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.None">
+            <summary>	
+            <dd> <p>The format is not known.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32B32A32_Typeless">
+            <summary>	
+            <dd> <p>A four-component, 128-bit typeless format that supports 32 bits per channel including alpha. 1</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32B32A32_Float">
+            <summary>	
+            <dd> <p>A four-component, 128-bit floating-point format that supports 32 bits per channel including alpha. 1</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32B32A32_UInt">
+            <summary>	
+            <dd> <p>A four-component, 128-bit unsigned-integer format that supports 32 bits per channel including alpha. 1</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32B32A32_SInt">
+            <summary>	
+            <dd> <p>A four-component, 128-bit signed-integer format that supports 32 bits per channel including alpha. 1</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32B32_Typeless">
+            <summary>	
+            <dd> <p>A three-component, 96-bit typeless format that supports 32 bits per color channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32B32_Float">
+            <summary>	
+            <dd> <p>A three-component, 96-bit floating-point format that supports 32 bits per color channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32B32_UInt">
+            <summary>	
+            <dd> <p>A three-component, 96-bit unsigned-integer format that supports 32 bits per color channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32B32_SInt">
+            <summary>	
+            <dd> <p>A three-component, 96-bit signed-integer format that supports 32 bits per color channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16B16A16_Typeless">
+            <summary>	
+            <dd> <p>A four-component, 64-bit typeless format that supports 16 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16B16A16_Float">
+            <summary>	
+            <dd> <p>A four-component, 64-bit floating-point format that supports 16 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16B16A16_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 64-bit unsigned-normalized-integer format that supports 16 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16B16A16_UInt">
+            <summary>	
+            <dd> <p>A four-component, 64-bit unsigned-integer format that supports 16 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16B16A16_SNorm">
+            <summary>	
+            <dd> <p>A four-component, 64-bit signed-normalized-integer format that supports 16 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16B16A16_SInt">
+            <summary>	
+            <dd> <p>A four-component, 64-bit signed-integer format that supports 16 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32_Typeless">
+            <summary>	
+            <dd> <p>A two-component, 64-bit typeless format that supports 32 bits for the red channel and 32 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32_Float">
+            <summary>	
+            <dd> <p>A two-component, 64-bit floating-point format that supports 32 bits for the red channel and 32 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32_UInt">
+            <summary>	
+            <dd> <p>A two-component, 64-bit unsigned-integer format that supports 32 bits for the red channel and 32 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G32_SInt">
+            <summary>	
+            <dd> <p>A two-component, 64-bit signed-integer format that supports 32 bits for the red channel and 32 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32G8X24_Typeless">
+            <summary>	
+            <dd> <p>A two-component, 64-bit typeless format that supports 32 bits for the red channel, 8 bits for the green channel, and 24 bits are unused.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.D32_Float_S8X24_UInt">
+            <summary>	
+            <dd> <p>A 32-bit floating-point component, and two unsigned-integer components (with an additional 32 bits). This format supports 32-bit depth, 8-bit stencil, and 24 bits are unused.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32_Float_X8X24_Typeless">
+            <summary>	
+            <dd> <p>A 32-bit floating-point component, and two typeless components (with an additional 32 bits). This format supports 32-bit red channel, 8 bits are unused, and 24 bits are unused.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.X32_Typeless_G8X24_UInt">
+            <summary>	
+            <dd> <p>A 32-bit typeless component, and two unsigned-integer components (with an additional 32 bits). This format has 32 bits unused, 8 bits for green channel, and 24 bits are unused.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R10G10B10A2_Typeless">
+            <summary>	
+            <dd> <p>A four-component, 32-bit typeless format that supports 10 bits for each color and 2 bits for alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R10G10B10A2_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized-integer format that supports 10 bits for each color and 2 bits for alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R10G10B10A2_UInt">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-integer format that supports 10 bits for each color and 2 bits for alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R11G11B10_Float">
+            <summary>	
+            <dd> <p>Three partial-precision floating-point numbers encoded into a single 32-bit value (a variant of s10e5, which is sign bit, 10-bit mantissa, and 5-bit biased (15) exponent).  There are no sign bits, and there is a 5-bit biased (15) exponent for each channel, 6-bit mantissa  for R and G, and a 5-bit mantissa for B, as shown in the following illustration.</p> <p></p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8B8A8_Typeless">
+            <summary>	
+            <dd> <p>A four-component, 32-bit typeless format that supports 8 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8B8A8_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized-integer format that supports 8 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8B8A8_UNorm_SRgb">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized integer sRGB format that supports 8 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8B8A8_UInt">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-integer format that supports 8 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8B8A8_SNorm">
+            <summary>	
+            <dd> <p>A four-component, 32-bit signed-normalized-integer format that supports 8 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8B8A8_SInt">
+            <summary>	
+            <dd> <p>A four-component, 32-bit signed-integer format that supports 8 bits per channel including alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16_Typeless">
+            <summary>	
+            <dd> <p>A two-component, 32-bit typeless format that supports 16 bits for the red channel and 16 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16_Float">
+            <summary>	
+            <dd> <p>A two-component, 32-bit floating-point format that supports 16 bits for the red channel and 16 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16_UNorm">
+            <summary>	
+            <dd> <p>A two-component, 32-bit unsigned-normalized-integer format that supports 16 bits each for the green and red channels.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16_UInt">
+            <summary>	
+            <dd> <p>A two-component, 32-bit unsigned-integer format that supports 16 bits for the red channel and 16 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16_SNorm">
+            <summary>	
+            <dd> <p>A two-component, 32-bit signed-normalized-integer format that supports 16 bits for the red channel and 16 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16G16_SInt">
+            <summary>	
+            <dd> <p>A two-component, 32-bit signed-integer format that supports 16 bits for the red channel and 16 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32_Typeless">
+            <summary>	
+            <dd> <p>A single-component, 32-bit typeless format that supports 32 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.D32_Float">
+            <summary>	
+            <dd> <p>A single-component, 32-bit floating-point format that supports 32 bits for depth.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32_Float">
+            <summary>	
+            <dd> <p>A single-component, 32-bit floating-point format that supports 32 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32_UInt">
+            <summary>	
+            <dd> <p>A single-component, 32-bit unsigned-integer format that supports 32 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R32_SInt">
+            <summary>	
+            <dd> <p>A single-component, 32-bit signed-integer format that supports 32 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R24G8_Typeless">
+            <summary>	
+            <dd> <p>A two-component, 32-bit typeless format that supports 24 bits for the red channel and 8 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.D24_UNorm_S8_UInt">
+            <summary>	
+            <dd> <p>A 32-bit z-buffer format that supports 24 bits for depth and 8 bits for stencil.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R24_UNorm_X8_Typeless">
+            <summary>	
+            <dd> <p>A 32-bit format, that contains a 24 bit, single-component, unsigned-normalized integer, with an additional typeless 8 bits. This format has 24 bits red channel and 8 bits unused.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.X24_Typeless_G8_UInt">
+            <summary>	
+            <dd> <p>A 32-bit format, that contains a 24 bit, single-component, typeless format,  with an additional 8 bit unsigned integer component. This format has 24 bits unused and 8 bits green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8_Typeless">
+            <summary>	
+            <dd> <p>A two-component, 16-bit typeless format that supports 8 bits for the red channel and 8 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8_UNorm">
+            <summary>	
+            <dd> <p>A two-component, 16-bit unsigned-normalized-integer format that supports 8 bits for the red channel and 8 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8_UInt">
+            <summary>	
+            <dd> <p>A two-component, 16-bit unsigned-integer format that supports 8 bits for the red channel and 8 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8_SNorm">
+            <summary>	
+            <dd> <p>A two-component, 16-bit signed-normalized-integer format that supports 8 bits for the red channel and 8 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8_SInt">
+            <summary>	
+            <dd> <p>A two-component, 16-bit signed-integer format that supports 8 bits for the red channel and 8 bits for the green channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16_Typeless">
+            <summary>	
+            <dd> <p>A single-component, 16-bit typeless format that supports 16 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16_Float">
+            <summary>	
+            <dd> <p>A single-component, 16-bit floating-point format that supports 16 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.D16_UNorm">
+            <summary>	
+            <dd> <p>A single-component, 16-bit unsigned-normalized-integer format that supports 16 bits for depth.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16_UNorm">
+            <summary>	
+            <dd> <p>A single-component, 16-bit unsigned-normalized-integer format that supports 16 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16_UInt">
+            <summary>	
+            <dd> <p>A single-component, 16-bit unsigned-integer format that supports 16 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16_SNorm">
+            <summary>	
+            <dd> <p>A single-component, 16-bit signed-normalized-integer format that supports 16 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R16_SInt">
+            <summary>	
+            <dd> <p>A single-component, 16-bit signed-integer format that supports 16 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8_Typeless">
+            <summary>	
+            <dd> <p>A single-component, 8-bit typeless format that supports 8 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8_UNorm">
+            <summary>	
+            <dd> <p>A single-component, 8-bit unsigned-normalized-integer format that supports 8 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8_UInt">
+            <summary>	
+            <dd> <p>A single-component, 8-bit unsigned-integer format that supports 8 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8_SNorm">
+            <summary>	
+            <dd> <p>A single-component, 8-bit signed-normalized-integer format that supports 8 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8_SInt">
+            <summary>	
+            <dd> <p>A single-component, 8-bit signed-integer format that supports 8 bits for the red channel.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.A8_UNorm">
+            <summary>	
+            <dd> <p>A single-component, 8-bit unsigned-normalized-integer format for alpha only.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R1_UNorm">
+            <summary>	
+            <dd> <p>A single-component, 1-bit unsigned-normalized integer format that supports 1 bit for the red channel. 2.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R9G9B9E5_Sharedexp">
+            <summary>	
+            <dd> <p>Three partial-precision floating-point numbers encoded into a single 32-bit value all sharing the same 5-bit exponent (variant of s10e5, which is sign bit, 10-bit mantissa, and 5-bit biased (15) exponent).  There is no sign bit, and there is a shared 5-bit biased (15) exponent and a 9-bit mantissa for each channel, as shown in the following illustration. 2.</p> <p></p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R8G8_B8G8_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized-integer format. This packed RGB format is analogous to the UYVY format. Each 32-bit block describes a pair of pixels: (R8, G8, B8) and (R8, G8, B8) where the R8/B8 values are repeated, and the G8 values are unique to each pixel. 3</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.G8R8_G8B8_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized-integer format. This packed RGB format is analogous to the YUY2 format. Each 32-bit block describes a pair of pixels: (R8, G8, B8) and (R8, G8, B8) where the R8/B8 values are repeated, and the G8 values are unique to each pixel. 3</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC1_Typeless">
+            <summary>	
+            <dd> <p>Four-component typeless block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC1_UNorm">
+            <summary>	
+            <dd> <p>Four-component block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC1_UNorm_SRgb">
+            <summary>	
+            <dd> <p>Four-component block-compression format for sRGB data. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC2_Typeless">
+            <summary>	
+            <dd> <p>Four-component typeless block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC2_UNorm">
+            <summary>	
+            <dd> <p>Four-component block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC2_UNorm_SRgb">
+            <summary>	
+            <dd> <p>Four-component block-compression format for sRGB data. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC3_Typeless">
+            <summary>	
+            <dd> <p>Four-component typeless block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC3_UNorm">
+            <summary>	
+            <dd> <p>Four-component block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC3_UNorm_SRgb">
+            <summary>	
+            <dd> <p>Four-component block-compression format for sRGB data. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC4_Typeless">
+            <summary>	
+            <dd> <p>One-component typeless block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC4_UNorm">
+            <summary>	
+            <dd> <p>One-component block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC4_SNorm">
+            <summary>	
+            <dd> <p>One-component block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC5_Typeless">
+            <summary>	
+            <dd> <p>Two-component typeless block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC5_UNorm">
+            <summary>	
+            <dd> <p>Two-component block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC5_SNorm">
+            <summary>	
+            <dd> <p>Two-component block-compression format. For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.B5G6R5_UNorm">
+            <summary>	
+            <dd> <p>A three-component, 16-bit unsigned-normalized-integer format that supports 5 bits for blue, 6 bits for green, and 5 bits for red.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.B5G5R5A1_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 16-bit unsigned-normalized-integer format that supports 5 bits for each color channel and 1-bit alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.B8G8R8A8_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized-integer format that supports 8 bits for each color channel and 8-bit alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.B8G8R8X8_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized-integer format that supports 8 bits for each color channel and 8 bits unused.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.R10G10B10_Xr_Bias_A2_UNorm">
+            <summary>	
+            <dd> <p>A four-component, 32-bit 2.8-biased fixed-point format that supports 10 bits for each color channel and 2-bit alpha.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.B8G8R8A8_Typeless">
+            <summary>	
+            <dd> <p>A four-component, 32-bit typeless format that supports 8 bits for each channel including alpha. 4</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.B8G8R8A8_UNorm_SRgb">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized standard RGB format that supports 8 bits for each channel including alpha. 4</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.B8G8R8X8_Typeless">
+            <summary>	
+            <dd> <p>A four-component, 32-bit typeless format that supports 8 bits for each color channel, and 8 bits are unused. 4</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.B8G8R8X8_UNorm_SRgb">
+            <summary>	
+            <dd> <p>A four-component, 32-bit unsigned-normalized standard RGB format that supports 8 bits for each color channel, and 8 bits are unused. 4</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC6H_Typeless">
+            <summary>	
+            <dd> <p>A typeless block-compression format. 4 For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC6H_Uf16">
+            <summary>	
+            <dd> <p>A block-compression format. 4 For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC6H_Sf16">
+            <summary>	
+            <dd> <p>A block-compression format. 4 For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC7_Typeless">
+            <summary>	
+            <dd> <p>A typeless block-compression format. 4 For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC7_UNorm">
+            <summary>	
+            <dd> <p>A block-compression format. 4 For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.BC7_UNorm_SRgb">
+            <summary>	
+            <dd> <p>A block-compression format. 4 For information about block-compression formats, see Texture Block Compression in Direct3D 11.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.PixelFormat.PVRTC_2bpp_RGB">
+            <summary>	
+            <dd> <p>A block-compression format. For information about block-compression formats, see Texture Block Compression in PowerVC Texture Compression.</p> </dd>	
+            </summary>	
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.PixelFormatExtensions">
+            <summary>
+            Extensions to <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/>.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.SizeInBytes(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Calculates the size of a <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> in bytes.
+            </summary>
+            <param name="format">The dxgi format.</param>
+            <returns>size of in bytes</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.SizeInBits(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Calculates the size of a <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> in bits.
+            </summary>
+            <param name="format">The pixel format.</param>
+            <returns>The size in bits</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.AlphaSizeInBits(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Calculate the size of the alpha channel in bits depending on the pixel format.
+            </summary>
+            <param name="format">The pixel format</param>
+            <returns>The size in bits</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsValid(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Returns true if the <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is valid.
+            </summary>
+            <param name="format">A format to validate</param>
+            <returns>True if the <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is valid.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsCompressed(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Returns true if the <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is a compressed format.
+            </summary>
+            <param name="fmt">The format to check for compressed.</param>
+            <returns>True if the <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is a compressed format</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsPacked(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determines whether the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is packed.
+            </summary>
+            <param name="fmt">The DXGI Format.</param>
+            <returns><c>true</c> if the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is packed; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsVideo(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determines whether the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is video.
+            </summary>
+            <param name="fmt">The <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/>.</param>
+            <returns><c>true</c> if the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is video; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsSRgb(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determines whether the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is a SRGB format.
+            </summary>
+            <param name="fmt">The <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/>.</param>
+            <returns><c>true</c> if the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is a SRGB format; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsHDR(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determines whether the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is HDR (either 16 or 32bits float)
+            </summary>
+            <param name="fmt">The FMT.</param>
+            <returns><c>true</c> if the specified pixel format is HDR (floating point); otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsTypeless(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determines whether the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is typeless.
+            </summary>
+            <param name="fmt">The <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/>.</param>
+            <returns><c>true</c> if the specified <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/> is typeless; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.ComputeScanlineCount(SiliconStudio.Paradox.Graphics.PixelFormat,System.Int32)">
+            <summary>
+            Computes the scanline count (number of scanlines).
+            </summary>
+            <param name="fmt">The <see cref="T:SiliconStudio.Paradox.Graphics.PixelFormat"/>.</param>
+            <param name="height">The height.</param>
+            <returns>The scanline count.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.HasSRgbEquivalent(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determine if the format has an equivalent sRGB format.
+            </summary>
+            <param name="format">the non-sRGB format</param>
+            <returns>true if the format has an sRGB equivalent</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.HasNonSRgbEquivalent(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determine if the format has an equivalent non-sRGB format.
+            </summary>
+            <param name="format">the sRGB format</param>
+            <returns>true if the format has an non-sRGB equivalent</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.ToSRgb(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Find the equivalent sRGB format to the provided format.
+            </summary>
+            <param name="format">The non sRGB format.</param>
+            <returns>
+            The equivalent sRGB format if any, the provided format else.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.ToNonSRgb(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Find the equivalent non sRGB format to the provided sRGB format.
+            </summary>
+            <param name="format">The non sRGB format.</param>
+            <returns>
+            The equivalent non sRGB format if any, the provided format else.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsRGBAOrder(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determines whether the specified format is in RGBA order.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>
+              <c>true</c> if the specified format is in RGBA order; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.IsBGRAOrder(SiliconStudio.Paradox.Graphics.PixelFormat)">
+            <summary>
+            Determines whether the specified format is in BGRA order.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>
+              <c>true</c> if the specified format is in BGRA order; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.PixelFormatExtensions.#cctor">
+            <summary>
+            Static initializer to speed up size calculation (not sure the JIT is enough "smart" for this kind of thing).
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.SamplerStateDescription">
+            <summary>
+            Describes a sampler state.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Graphics.SamplerStateDescription.#ctor(SiliconStudio.Paradox.Graphics.TextureFilter,SiliconStudio.Paradox.Graphics.TextureAddressMode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Graphics.SamplerStateDescription"/> class.
+            </summary>
+            <param name="filter">The filter.</param>
+            <param name="addressMode">The address mode.</param>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.Filter">
+            <summary>
+            Gets or sets filtering method to use when sampling a texture (see <see cref="T:SiliconStudio.Paradox.Graphics.TextureFilter"/>).
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.AddressU">
+            <summary>
+            Gets or sets method to use for resolving a u texture coordinate that is outside the 0 to 1 range (see <see cref="T:SiliconStudio.Paradox.Graphics.TextureAddressMode"/>).
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.AddressV">
+            <summary>
+            Gets or sets method to use for resolving a v texture coordinate that is outside the 0 to 1 range.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.AddressW">
+            <summary>
+            Gets or sets method to use for resolving a w texture coordinate that is outside the 0 to 1 range.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.MipMapLevelOfDetailBias">
+            <summary>
+            Gets or sets offset from the calculated mipmap level.
+            For example, if Direct3D calculates that a texture should be sampled at mipmap level 3 and MipLODBias is 2, then the texture will be sampled at mipmap level 5.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.MaxAnisotropy">
+            <summary>
+            Gets or sets clamping value used if Anisotropy or ComparisonAnisotropy is specified in Filter. Valid values are between 1 and 16.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.CompareFunction">
+            <summary>
+            Gets or sets a function that compares sampled data against existing sampled data. The function options are listed in <see cref="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.CompareFunction"/>.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.BorderColor">
+            <summary>
+            Gets or sets border color to use if <see cref="F:SiliconStudio.Paradox.Graphics.TextureAddressMode.Border"/> is specified for AddressU, AddressV, or AddressW. Range must be between 0.0 and 1.0 inclusive.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.MinMipLevel">
+            <summary>
+            Gets or sets lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.SamplerStateDescription.MaxMipLevel">
+            <summary>
+            Gets or sets upper end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed. This value must be greater than or equal to MinLOD. To have no upper limit on LOD set this to a large value such as D3D11_FLOAT32_MAX.
+            </summary>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Graphics.SamplerStateDescription.Default">
+            <summary>
+            Gets default values for this instance.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.StandardImageHelper">
+            <summary>
+            This class is responsible to provide image loader for png, gif, bmp.
+            </summary>
+            <summary>
+            This class is responsible to provide image loader for png, gif, bmp.
+            TODO: Replace using System.Drawing, as it is not available on all platforms (not on Windows 8/WP8).
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.TextureAddressMode">
+            <summary>	
+            Identify a technique for resolving texture coordinates that are outside of the boundaries of a texture.	
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureAddressMode.Wrap">
+            <summary>	
+            Tile the texture at every (u,v) integer junction. For example, for u values between 0 and 3, the texture is repeated three times. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureAddressMode.Mirror">
+            <summary>	
+            Flip the texture at every (u,v) integer junction. For u values between 0 and 1, for example, the texture is addressed normally; between 1 and 2, the texture is flipped (mirrored); between 2 and 3, the texture is normal again; and so on.  	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureAddressMode.Clamp">
+            <summary>	
+            Texture coordinates outside the range [0.0, 1.0] are set to the texture color at 0.0 or 1.0, respectively. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureAddressMode.Border">
+            <summary>	
+            Texture coordinates outside the range [0.0, 1.0] are set to the border color specified in <see cref="!:SamplerState"/> or HLSL code. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureAddressMode.MirrorOnce">
+            <summary>	
+            Similar to D3D11_TEXTURE_ADDRESS_MIRROR and D3D11_TEXTURE_ADDRESS_CLAMP. Takes the absolute value of the texture coordinate (thus, mirroring around 0), and then clamps to the maximum value. 	
+            </summary>	
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.TextureDimension">
+            <summary>
+            Defines the dimension of a texture.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureDimension.Texture1D">
+            <summary>
+            The texture dimension is 1D.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureDimension.Texture2D">
+            <summary>
+            The texture dimension is 2D.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureDimension.Texture3D">
+            <summary>
+            The texture dimension is 3D.
+            </summary>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureDimension.TextureCube">
+            <summary>
+            The texture dimension is a CubeMap.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Graphics.TextureFilter">
+            <summary>	
+            Filtering options during texture sampling.	
+            </summary>	
+            <remarks>	
+            During texture sampling, one or more texels are read and combined (this is calling filtering) to produce a single value. Point sampling reads a single texel while linear sampling reads two texels (endpoints) and linearly interpolates a third value between the endpoints. HLSL texture-sampling functions also support comparison filtering during texture sampling. Comparison filtering compares each sampled texel against a comparison value. The boolean result is blended the same way that normal texture filtering is blended. You can use HLSL intrinsic texture-sampling functions that implement texture filtering only or companion functions that use texture filtering with comparison filtering.  Texture Sampling FunctionTexture Sampling Function with Comparison Filtering samplesamplecmp or samplecmplevelzero  ? Comparison filters only work with textures that have the following DXGI formats: R32_FLOAT_X8X24_TYPELESS, R32_FLOAT, R24_UNORM_X8_TYPELESS, R16_UNORM. 	
+            </remarks>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.Point">
+            <summary>	
+            Use point sampling for minification, magnification, and mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.MinMagPointMipLinear">
+            <summary>	
+            Use point sampling for minification and magnification; use linear interpolation for mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.MinPointMagLinearMipPoint">
+            <summary>	
+            Use point sampling for minification; use linear interpolation for magnification; use point sampling for mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.MinPointMagMipLinear">
+            <summary>	
+            Use point sampling for minification; use linear interpolation for magnification and mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.MinLinearMagMipPoint">
+            <summary>	
+            Use linear interpolation for minification; use point sampling for magnification and mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.MinLinearMagPointMipLinear">
+            <summary>	
+            Use linear interpolation for minification; use point sampling for magnification; use linear interpolation for mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.MinMagLinearMipPoint">
+            <summary>	
+            Use linear interpolation for minification and magnification; use point sampling for mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.Linear">
+            <summary>	
+            Use linear interpolation for minification, magnification, and mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.Anisotropic">
+            <summary>	
+            Use anisotropic interpolation for minification, magnification, and mip-level sampling. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonPoint">
+            <summary>	
+            Use point sampling for minification, magnification, and mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonMinMagPointMipLinear">
+            <summary>	
+            Use point sampling for minification and magnification; use linear interpolation for mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonMinPointMagLinearMipPoint">
+            <summary>	
+            Use point sampling for minification; use linear interpolation for magnification; use point sampling for mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonMinPointMagMipLinear">
+            <summary>	
+            Use point sampling for minification; use linear interpolation for magnification and mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonMinLinearMagMipPoint">
+            <summary>	
+            Use linear interpolation for minification; use point sampling for magnification and mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonMinLinearMagPointMipLinear">
+            <summary>	
+            Use linear interpolation for minification; use point sampling for magnification; use linear interpolation for mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonMinMagLinearMipPoint">
+            <summary>	
+            Use linear interpolation for minification and magnification; use point sampling for mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonLinear">
+            <summary>	
+            Use linear interpolation for minification, magnification, and mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="F:SiliconStudio.Paradox.Graphics.TextureFilter.ComparisonAnisotropic">
+            <summary>	
+            Use anisotropic interpolation for minification, magnification, and mip-level sampling. Compare the result to the comparison value. 	
+            </summary>	
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.IParameterCollectionInheritance">
+            <summary>
+            Base for inheriting ParameterCollection (used by ParameterCollection.AddSources).
+            This allows for directly using ParameterCollection or a more advanced class (such as InheritanceDefinition) when adding sources.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.IParameterCollectionInheritanceInternal">
+            <summary>
+            Actual definition of IParameterCollectionInheritance (hidden in internal interface).
+            This could be moved directly in IParameterCollectionInheritance if it becomes public.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterCollection">
+            <summary>
+            A container to handle a hierarchical collection of effect variables.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Rendering.ParameterCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Rendering.ParameterCollection"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.AddEvent(SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterCollection.ValueChangedDelegate)">
+            <summary>
+            Adds an event that will be raised when a value is updated.
+            </summary>
+            <param name="key">Key to listen to (or null to listen to everything).</param>
+            <param name="valueUpdated">Delegate that will be called when value changes.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.RemoveEvent(SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterCollection.ValueChangedDelegate)">
+            <summary>
+            Removes an event previously added with AddEvent.
+            </summary>
+            <param name="key"></param>
+            <param name="valueUpdated"></param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.ContainsKey(SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Determines whether the specified instance contains a parameter key.
+            </summary>
+            <param name="key">The parameter key.</param>
+            <returns>
+              <c>true</c> if the specified key contains this key; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValueBinarySearch(SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Gets the index of an InternalValue within IndexedInternalValues given its key.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.GetOrCreateKeyIndex(SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Gets or creates an internal value index given its key.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Get``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0})">
+            <summary>
+            Gets the value for the specified key.
+            </summary>
+            <typeparam name="T">A valuetype</typeparam>
+            <param name="key">The key.</param>
+            <returns>The value for the specified key</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Get``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0},``0@)">
+            <summary>
+            Gets the value for the specified key.
+            </summary>
+            <typeparam name="T">A valuetype</typeparam>
+            <param name="key">The key.</param>
+            <param name="result">The result.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.TryGet``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0})">
+            <summary>
+            Tries to get the value for the specified key.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.TryGet``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0},``0@)">
+            <summary>
+            Tries to get the value for the specified key.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">The key.</param>
+            <param name="result">The result.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.SetDefault(SiliconStudio.Paradox.Rendering.ParameterKey,System.Boolean)">
+            <summary>
+            Sets the default value for the specified key (if undefined, otherwise do nothing).
+            </summary>
+            <param name="key">The key.</param>
+            <param name="overrideIfInherited">Specifies if inherited value should be overriden.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Set``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0},``0)">
+            <summary>
+            Sets a struct value for the specified key.
+            </summary>
+            <typeparam name="T">A valuetype</typeparam>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.SetArray``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0[]},``0[])">
+            <summary>
+            Sets an array of valuetypes for the specified key.
+            </summary>
+            <typeparam name="T">A valuetype</typeparam>
+            <param name="key">The key.</param>
+            <param name="values">The array of valuetypes.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Set``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0[]},``0[],System.Int32,System.Int32)">
+            <summary>
+            Sets an array of valuetypes for the specified key.
+            </summary>
+            <typeparam name="T">A valuetype</typeparam>
+            <param name="key">The key.</param>
+            <param name="values">The array of valuetypes.</param>
+            <param name="destinationOffset">The destination offset.</param>
+            <param name="count">The number of elements to copy from value array.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Set``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0[]},``0[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets an array of valuetypes for the specified key.
+            </summary>
+            <typeparam name="T">A valuetype</typeparam>
+            <param name="key">The key.</param>
+            <param name="values">The array of valuetypes.</param>
+            <param name="sourceOffset">The source offset.</param>
+            <param name="destinationOffset">The destination offset.</param>
+            <param name="count">The number of elements to copy from value array.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Remove(SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Removes the specified key and associated value
+            </summary>
+            <param name="key">The key.</param>
+            <exception cref="T:System.InvalidOperationException">If trying to remove a key from a collection that is not the owner. Or trying to remove a key that is referenced by a dynamic key</exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Contains(SiliconStudio.Paradox.Rendering.ParameterCollection)">
+            <summary>
+            Tests if the values in parameters are contained into this instance.
+            It will automatically handle default values as well (that is, if something is set in parameters with default value but not set in this instance, it will be ignored).
+            </summary>
+            <param name="parameters">The collection of parameters that should be included in this one.</param>
+            <returns>True if this collection contains all values from parameters. False otherwise.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.AddSources(SiliconStudio.Paradox.Rendering.IParameterCollectionInheritance[])">
+            <summary>
+            Adds the sources.
+            </summary>
+            <param name="parameterCollections">The effect variable collections.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.RemoveSource(SiliconStudio.Paradox.Rendering.IParameterCollectionInheritance)">
+            <summary>
+            Removes the sources.
+            </summary>
+            <param name="parameterCollection">The source parameter collection.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.CopySharedTo(SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterCollection)">
+            <summary>
+            Copy a shared value from this instance to another instance.
+            </summary>
+            <param name="fromKey">From key.</param>
+            <param name="toKey">To key.</param>
+            <param name="toCollection">To collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            fromKey
+            or
+            toCollection
+            </exception>
+            <exception cref="T:System.InvalidOperationException">CopyingReadOnly is not supporting Sources from origin</exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Reset(SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Removes the value locally and try to get a value from a source.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.IsValueOwner(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Determines whether [is value owner] of [the specified key].
+            </summary>
+            <param name="key">The key.</param>
+            <returns>
+              <c>true</c> if [is value owner] of [the specified key]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.Destroy">
+            <inheritdoc/>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.CreateInternalValue(SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Create an internal value given its ParameterKey.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.InheritValue(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue,SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Inherits an InternalValue.
+            </summary>
+            <param name="internalValue"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.UpdateSources(SiliconStudio.Paradox.Rendering.IParameterCollectionInheritance[])">
+            <summary>
+            Updates OnUpdateValue delegate for newly added/removed sources.
+            </summary>
+            <param name="oldSources"></param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.FindOverrideGroupIndex(System.Collections.Generic.KeyValuePair{SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue})">
+            <summary>
+            Returns index in flattened hierarchy if positive, otherwise sources.Count (this) or -1 (not found).
+            </summary>
+            <param name="internalValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.effectVariableCollection_OnUpdateValue(SiliconStudio.Paradox.Rendering.ParameterCollection,SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Called when an InternalValue has been updated.
+            It will recursively notify dependents ParameterCollection as well.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.UpdateValueChanged(SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue,SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Updates ValueChanged event for newly changed InternalValue.
+            </summary>
+            <param name="key"></param>
+            <param name="newInternalValue"></param>
+            <param name="oldInternalValue"></param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.GetUpdatedInternalValue(System.Int32)">
+            <summary>
+            Get InternalValue at given index of key mapping specified with SetKeyMapping.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.UpdateKeyMapping(SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Called when any InternalValue is updated so that key mapping is kept updated.
+            </summary>
+            <param name="key"></param>
+            <param name="internalValue"></param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.SetKeyMapping(System.Collections.Generic.Dictionary{SiliconStudio.Paradox.Rendering.ParameterKey,System.Int32})">
+            <summary>
+            Sets a specific key mapping, which can then be used when querying for InternalValue with GetUpdatedInternalValue(index).
+            It allows for skipping key lookup when performance is required (i.e. in rendering code).
+            </summary>
+            <param name="newKeyMapping">The key mapping.</param>
+            <exception cref="T:System.ArgumentNullException">newKeyMapping</exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.ReleaseValue(SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Releases this InternalValue and its associated data.
+            </summary>
+            <param name="key"></param>
+            <param name="internalValue"></param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.GetInternalValue(SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Gets internal value from specificed key.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.GetOrCreateInternalValue(System.Int32,SiliconStudio.Paradox.Rendering.ParameterKey,System.Boolean@)">
+            <summary>
+            Gets or creates an internal value given its index and key.
+            </summary>
+            <param name="index"></param>
+            <param name="key"></param>
+            <param name="newValue"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.Sources">
+            <summary>
+            Gets the sources for this collection.
+            </summary>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.DynamicValues">
+            <summary>
+            Gets the dynamic values.
+            </summary>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.Count">
+            <summary>
+            Gets the number of parameters stored in this instance..
+            </summary>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.Keys">
+            <summary>
+            Gets the keys of this collection.
+            </summary>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.InternalCount">
+            <summary>
+            Gets the number of internal values.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValueReference">
+            <summary>
+            Dynamic values use this class when pointing to a source.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue">
+            <summary>
+            Holds a value inside ParameterCollection.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue.ValueEquals(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Determines if this instance and the given internal value have same <see cref="!:Value"/>.
+            </summary>
+            <param name="internalValue">The internal value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue.ValueEquals(System.Object)">
+            <summary>
+            Determines if this instance and the given internal value have same <see cref="!:Value"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue.IsDefaultValue(SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Determines whether [is default value] [the specified parameter key].
+            </summary>
+            <param name="parameterKey">The parameter key.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValueBase`1">
+            <summary>
+            Holds a value of a specific type in a ParameterCollection.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.System#Collections#Generic#IEnumerable{SiliconStudio#Paradox#Rendering#ParameterKey}#GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.Count">
+            <inheritdoc/>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.Item(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.Enumerator.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.Enumerator.MoveNext">
+            <inheritdoc/>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.Enumerator.Reset">
+            <inheritdoc/>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.Enumerator.Current">
+            <inheritdoc/>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterCollection.KeyCollection.Enumerator.System#Collections#IEnumerator#Current">
+            <inheritdoc/>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterCollectionExtensions">
+            <summary>
+            Extensions for <see cref="T:SiliconStudio.Paradox.Rendering.ParameterCollection"/>.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollectionExtensions.Clone``1(``0)">
+            <summary>
+            Clones the specified <see cref="T:SiliconStudio.Paradox.Rendering.ParameterCollection"/>.
+            </summary>
+            <typeparam name="T">Type of the parameter collection</typeparam>
+            <param name="parameterCollection">The parameter collection.</param>
+            <returns>A clone of the parameter collection. Values are not cloned.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollectionExtensions.CopyTo``1(``0,SiliconStudio.Paradox.Rendering.ParameterCollection)">
+            <summary>
+            Copies the automatic.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parameters">The parameters.</param>
+            <param name="parametersTo">The parameters automatic.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollectionExtensions.CopySharedTo``1(``0,SiliconStudio.Paradox.Rendering.ParameterCollection)">
+            <summary>
+            Copies the automatic.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parameters">The parameters.</param>
+            <param name="parametersTo">The parameters automatic.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterCollectionExtensions.IsSubsetOf(SiliconStudio.Paradox.Rendering.ParameterCollection,SiliconStudio.Paradox.Rendering.ParameterCollection)">
+            <summary>
+            Determines whether this instance container is the subset of another container.
+            </summary>
+            <param name="subset">The container to test as a subset of the 'against' container.</param>
+            <param name="against">The container superset.</param>
+            <returns><c>true</c> if the specified against is subset; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicBase">
+            <summary>
+            Base class for <see cref="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue"/>.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue">
+            <summary>
+            Base class for <see cref="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue`1"/>.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue`1">
+            <summary>
+            Describes a dynamic value with no input.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue1`4">
+            <summary>
+            Describes a dynamic value with 1 inputs.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T1">The type of the 1.</typeparam>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue1`4.#ctor(SiliconStudio.Paradox.Rendering.ParameterKey{`1},SiliconStudio.Paradox.Rendering.ParameterUpdateDelegate1{`3,`2},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ParameterDynamicValue&lt;T,T1&gt;"/> class.
+            </summary>
+            <param name="param1">The param1.</param>
+            <param name="update">The update.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue1`4.GetValue(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Gets the value.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterDynamicValue1`4.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue2`6">
+            <summary>
+            Describes a dynamic value with 2 inputs.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T1">The type of the 1.</typeparam>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue2`6.#ctor(SiliconStudio.Paradox.Rendering.ParameterKey{`1},SiliconStudio.Paradox.Rendering.ParameterKey{`2},SiliconStudio.Paradox.Rendering.ParameterUpdateDelegate2{`4,`5,`3},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ParameterDynamicValue&lt;T,T1&gt;"/> class.
+            </summary>
+            <param name="param1">The param1.</param>
+            <param name="update">The update.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue2`6.GetValue(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Gets the value.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterDynamicValue2`6.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue3`8">
+            <summary>
+            Describes a dynamic value with 3 inputs.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T1">The type of the 1.</typeparam>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue3`8.#ctor(SiliconStudio.Paradox.Rendering.ParameterKey{`1},SiliconStudio.Paradox.Rendering.ParameterKey{`2},SiliconStudio.Paradox.Rendering.ParameterKey{`3},SiliconStudio.Paradox.Rendering.ParameterUpdateDelegate3{`5,`6,`7,`4},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ParameterDynamicValue&lt;T,T1&gt;"/> class.
+            </summary>
+            <param name="param1">The param1.</param>
+            <param name="update">The update.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue3`8.GetValue(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Gets the value.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterDynamicValue3`8.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue4`10">
+            <summary>
+            Describes a dynamic value with 4 inputs.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T1">The type of the 1.</typeparam>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue4`10.#ctor(SiliconStudio.Paradox.Rendering.ParameterKey{`1},SiliconStudio.Paradox.Rendering.ParameterKey{`2},SiliconStudio.Paradox.Rendering.ParameterKey{`3},SiliconStudio.Paradox.Rendering.ParameterKey{`4},SiliconStudio.Paradox.Rendering.ParameterUpdateDelegate4{`6,`7,`8,`9,`5},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ParameterDynamicValue&lt;T,T1&gt;"/> class.
+            </summary>
+            <param name="param1">The param1.</param>
+            <param name="update">The update.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue4`10.GetValue(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Gets the value.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterDynamicValue4`10.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue5`12">
+            <summary>
+            Describes a dynamic value with 5 inputs.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T1">The type of the 1.</typeparam>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue5`12.#ctor(SiliconStudio.Paradox.Rendering.ParameterKey{`1},SiliconStudio.Paradox.Rendering.ParameterKey{`2},SiliconStudio.Paradox.Rendering.ParameterKey{`3},SiliconStudio.Paradox.Rendering.ParameterKey{`4},SiliconStudio.Paradox.Rendering.ParameterKey{`5},SiliconStudio.Paradox.Rendering.ParameterUpdateDelegate5{`7,`8,`9,`10,`11,`6},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ParameterDynamicValue&lt;T,T1&gt;"/> class.
+            </summary>
+            <param name="param1">The param1.</param>
+            <param name="update">The update.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue5`12.GetValue(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Gets the value.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterDynamicValue5`12.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterDynamicValue6`14">
+            <summary>
+            Describes a dynamic value with 6 inputs.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T1">The type of the 1.</typeparam>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue6`14.#ctor(SiliconStudio.Paradox.Rendering.ParameterKey{`1},SiliconStudio.Paradox.Rendering.ParameterKey{`2},SiliconStudio.Paradox.Rendering.ParameterKey{`3},SiliconStudio.Paradox.Rendering.ParameterKey{`4},SiliconStudio.Paradox.Rendering.ParameterKey{`5},SiliconStudio.Paradox.Rendering.ParameterKey{`6},SiliconStudio.Paradox.Rendering.ParameterUpdateDelegate6{`8,`9,`10,`11,`12,`13,`7},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ParameterDynamicValue&lt;T,T1&gt;"/> class.
+            </summary>
+            <param name="param1">The param1.</param>
+            <param name="update">The update.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterDynamicValue6`14.GetValue(SiliconStudio.Paradox.Rendering.ParameterCollection.InternalValue)">
+            <summary>
+            Gets the value.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterDynamicValue6`14.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterKey">
+            <summary>
+            Key of an effect parameter.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKey.#ctor(System.Type,System.String,System.Int32,SiliconStudio.Core.PropertyKeyMetadata[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Rendering.ParameterKey"/> class.
+            </summary>
+            <param name="propertyType">Type of the property.</param>
+            <param name="name">The name.</param>
+            <param name="length">The length.</param>
+            <param name="metadatas">The metadatas.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKey.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKey.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKey.op_Equality(SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKey.op_Inequality(SiliconStudio.Paradox.Rendering.ParameterKey,SiliconStudio.Paradox.Rendering.ParameterKey)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKey.ConvertValue(System.Object)">
+            <summary>
+            Converts the value passed by parameter to the expecting value of this parameter key (for example, if value is
+            an integer while this parameter key is expecting a float)
+            </summary>
+            <param name="value">The value.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Rendering.ParameterKey.Length">
+            <summary>
+            Gets the number of elements for this key.
+            </summary>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterKey`1">
+            <summary>
+            Key of an gereric effect parameter.
+            </summary>
+            <typeparam name="T">Type of the parameter key.</typeparam>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKey`1.#ctor(System.String,System.Int32,SiliconStudio.Core.PropertyKeyMetadata)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Rendering.ParameterKey`1"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="length">The length.</param>
+            <param name="metadata">The metadata.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKey`1.#ctor(System.String,System.Int32,SiliconStudio.Core.PropertyKeyMetadata[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Rendering.ParameterKey`1"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="length">The length.</param>
+            <param name="metadatas">The metadatas.</param>
+        </member>
+        <member name="T:SiliconStudio.Paradox.Rendering.ParameterKeyValueMetadata`1">
+            <summary>
+            Metadata used for <see cref="T:SiliconStudio.Paradox.Rendering.ParameterKey"/>
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeyValueMetadata`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Rendering.ParameterKeyValueMetadata"/> class.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeyValueMetadata`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SiliconStudio.Paradox.Rendering.ParameterKeyValueMetadata"/> class.
+            </summary>
+            <param name="setupDelegate">The setup delegate.</param>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeyValueMetadata`1.#ctor(SiliconStudio.Paradox.Rendering.ParameterDynamicValue{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="!:ParameterKeyValueMetadataValueMetadata&lt;T&gt;"/> class.
+            </summary>
+            <param name="defaultDynamicValue">The default dynamic value.</param>
+        </member>
+        <member name="F:SiliconStudio.Paradox.Rendering.ParameterKeyValueMetadata`1.DefaultValue">
+            <summary>
+            Gets the default value.
+            </summary>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeys.GetKeys">
+            <summary>
+            Returns property keys matching a given type
+            </summary>
+            <param name="keyType">Type of the key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeys.New``1(``0,System.String)">
+            <summary>
+            Creates a value key.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="defaultValue">The default value.</param>
+            <param name="name">The name.</param>
+            <returns>ParameterKey{``0}.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeys.NewWithMetas``1(SiliconStudio.Core.PropertyKeyMetadata)">
+            <summary>
+            Creates a value key.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="metadata">The metadata.</param>
+            <returns>ParameterKey{``0}.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeys.NewWithMetas``1(SiliconStudio.Core.PropertyKeyMetadata[])">
+            <summary>
+            Creates a value key.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="metadatas">The metadatas.</param>
+            <returns>ParameterKey{``0}.</returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeys.IndexedKey``1(SiliconStudio.Paradox.Rendering.ParameterKey{``0},System.Int32)">
+            <summary>
+            Creates the key with specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeys.ComposeWith``1(``0,System.String)">
+            <summary>
+            Compose a key with a name (e.g  if key is `MyKey.MyKeyName` and name is `MyName`, the result key will be `MyKey.MyKeyName.MyName`)
+            </summary>
+            <typeparam name="T">Type of the key value</typeparam>
+            <param name="key">The key.</param>
+            <param name="name">The name to append to the key.</param>
+            <returns>The composition of key and name</returns>
+            <exception cref="T:System.ArgumentNullException">
+            key
+            or
+            name
+            </exception>
+        </member>
+        <member name="M:SiliconStudio.Paradox.Rendering.ParameterKeys.ComposeIndexer``1(``0,System.String,System.Int32)">
+            <summary>
+            Compose a key with a name and index (e.g  if key is `MyKey.MyKeyName` and name is `MyName` and index is 5, the result key will be `MyKey.MyKeyName.MyName[5]`)
+            </summary>
+            <typeparam name="T">Type of the key value</typeparam>
+            <param name="key">The key.</param>
+            <param name="name">The name to append to the key.</param>
+            <param name="index">The index.</param>
+            <returns>T.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            key
+            or
+            name
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">index;Must be &gt;= 0</exception>
+        </member>
+    </members>
+</doc>

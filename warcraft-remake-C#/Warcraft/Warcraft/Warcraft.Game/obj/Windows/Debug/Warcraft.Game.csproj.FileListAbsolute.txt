@@ -1,0 +1,5 @@
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Warcraft\Bin\Windows-Direct3D11\Debug\Warcraft.Game.dll
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Warcraft\Bin\Windows-Direct3D11\Debug\Warcraft.Game.pdb
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Warcraft\Warcraft.Game\obj\Windows\Debug\Warcraft.Game.csprojResolveAssemblyReference.cache
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Warcraft\Warcraft.Game\obj\Windows\Debug\Warcraft.Game.dll
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Warcraft\Warcraft.Game\obj\Windows\Debug\Warcraft.Game.pdb

@@ -1,0 +1,25 @@
+!Package
+Id: f436dfc0-9547-40cc-a768-f3ea23d0c32f
+Tags: []
+Meta:
+    Name: Package.Assets
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.2.1-beta
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences: []
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

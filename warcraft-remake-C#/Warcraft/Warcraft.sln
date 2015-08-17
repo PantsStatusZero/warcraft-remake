@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
@@ -11,6 +11,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warcraft.Windows", "Warcraft\Warcraft.Windows\Warcraft.Windows.csproj", "{9B585212-D071-447D-A494-F4CE4DACA54D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warcraft.Game", "Warcraft\Warcraft.Game\Warcraft.Game.csproj", "{018C8338-7950-4863-B930-7E53979C6024}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.Assets", "Package.Assets", "{F436DFC0-9547-40CC-A768-F3EA23D0C32F}"
+	ProjectSection(SiliconStudioPackage) = preProject
+		Package.Assets/Package.Assets.pdxpkg = Package.Assets/Package.Assets.pdxpkg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
