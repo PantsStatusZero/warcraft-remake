@@ -5,52 +5,52 @@ Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Sprites:
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Peasant.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Peasant.gif
         Name: Peasant
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Footman.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Footman.gif
         Name: Footman
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Archer.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Archer.gif
         Name: Archer
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Knight.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Knight.gif
         Name: Knight
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Wounded.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Wounded.gif
         Name: Wounded
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Catapult.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Catapult.gif
         Name: Catapult
         TextureRegion: {X: 0, Y: 0, Width: 55, Height: 39}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Cleric.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Cleric.gif
         Name: Cleric
         TextureRegion: {X: 0, Y: 0, Width: 55, Height: 37}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Conjurer.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Conjurer.gif
         Name: Conjurer
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/Scorpion.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/Scorpion.gif
         Name: Scorpion
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Humans/Portraits/WaterElemental.gif
+    -   Source: ../../../../RawAssets/Races/Humans/Portraits/WaterElemental.gif
         Name: WaterElemental
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}

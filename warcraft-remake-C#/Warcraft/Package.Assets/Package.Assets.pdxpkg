@@ -18,8 +18,15 @@ Profiles:
             -   Path: Assets/Shared
                 RawImports: []
         OutputGroupDirectories: {}
-        Properties: {}
-        ProjectReferences: []
+        Properties:
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_10_0
+            GameSettingsAsset.DefaultScene: null
+        ProjectReferences:
+            -   Id: 6bc884f3-668d-45f6-91df-077f745fb00d
+                Location: Package.Assets/Package.Assets.csproj
+                Type: Library
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []

@@ -5,62 +5,62 @@ Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Sprites:
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/ShieldStrength1.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/ShieldStrength1.gif
         Name: Frame 0
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/ShieldStrength2.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/ShieldStrength2.gif
         Name: ShieldStrength2
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/AxeStrength1.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/AxeStrength1.gif
         Name: AxeStrength1
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/AxeStrength2.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/AxeStrength2.gif
         Name: AxeStrength2
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/SpearStrength1.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/SpearStrength1.gif
         Name: SpearStrength1
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/SpearStrength2.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/SpearStrength2.gif
         Name: SpearStrength2
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/DarkVision.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/DarkVision.gif
         Name: DarkVision
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/RaiseDead.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/RaiseDead.gif
         Name: RaiseDead
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/UnholyArmor.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/UnholyArmor.gif
         Name: UnholyArmor
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/PoisonCloud.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/PoisonCloud.gif
         Name: PoisonCloud
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/Spiders.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/Spiders.gif
         Name: SummonSpiders
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Updates/Daemon.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Updates/Daemon.gif
         Name: SummonDaemon
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}

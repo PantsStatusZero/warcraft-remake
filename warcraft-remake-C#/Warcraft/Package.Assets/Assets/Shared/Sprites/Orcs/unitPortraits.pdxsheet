@@ -5,52 +5,52 @@ Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Sprites:
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Peon.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Peon.gif
         Name: Peon
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Grunt.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Grunt.gif
         Name: Grunt
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Spearman.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Spearman.gif
         Name: Spearman
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Raider.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Raider.gif
         Name: Raider
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Skeleton.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Skeleton.gif
         Name: Skeleton
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Catapult.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Catapult.gif
         Name: Catapult
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Necrolyte.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Necrolyte.gif
         Name: Necrolyte
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Warlock.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Warlock.gif
         Name: Warlock
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Spider.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Spider.gif
         Name: Spider
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
-    -   Source: ../../../../../Warcraft/RawAssets/Races/Orcs/Portraits/Daemon.gif
+    -   Source: ../../../../RawAssets/Races/Orcs/Portraits/Daemon.gif
         Name: Daemon
         TextureRegion: {X: 0, Y: 0, Width: 54, Height: 38}
         Center: {X: 0, Y: 0}

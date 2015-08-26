@@ -1,8 +1,6 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Warcraft", "Warcraft", "{D9F7B6E4-4424-4ED6-8C5E-11F691DC54D2}"
 	ProjectSection(SiliconStudioPackage) = preProject
 		Warcraft/Warcraft.pdxpkg = Warcraft/Warcraft.pdxpkg
@@ -93,6 +91,9 @@ Global
 		{018C8338-7950-4863-B930-7E53979C6024}.Testing|Mixed Platforms.Build.0 = Testing|Any CPU
 		{018C8338-7950-4863-B930-7E53979C6024}.Testing|Windows.ActiveCfg = Testing|Any CPU
 		{018C8338-7950-4863-B930-7E53979C6024}.Testing|Windows.Build.0 = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9B585212-D071-447D-A494-F4CE4DACA54D} = {D9F7B6E4-4424-4ED6-8C5E-11F691DC54D2}

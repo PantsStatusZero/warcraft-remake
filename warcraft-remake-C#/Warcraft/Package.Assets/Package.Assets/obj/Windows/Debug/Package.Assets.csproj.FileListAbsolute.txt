@@ -1,0 +1,8 @@
+C:\Users\ncordova\Documents\Paradox Projects\Warcraft\Package.Assets\Bin\Windows-Direct3D11\Debug\Package.Assets.dll
+C:\Users\ncordova\Documents\Paradox Projects\Warcraft\Package.Assets\Bin\Windows-Direct3D11\Debug\Package.Assets.pdb
+C:\Users\ncordova\Documents\Paradox Projects\Warcraft\Package.Assets\Package.Assets\obj\Windows\Debug\Package.Assets.dll
+C:\Users\ncordova\Documents\Paradox Projects\Warcraft\Package.Assets\Package.Assets\obj\Windows\Debug\Package.Assets.pdb
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Package.Assets\Bin\Windows-Direct3D11\Debug\Package.Assets.dll
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Package.Assets\Bin\Windows-Direct3D11\Debug\Package.Assets.pdb
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Package.Assets\Package.Assets\obj\Windows\Debug\Package.Assets.dll
+C:\Users\ncordova\Documents\GitHub\warcraft-remake\warcraft-remake-C#\Warcraft\Package.Assets\Package.Assets\obj\Windows\Debug\Package.Assets.pdb
