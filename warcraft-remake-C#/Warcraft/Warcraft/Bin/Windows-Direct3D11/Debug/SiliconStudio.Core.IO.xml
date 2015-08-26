@@ -254,16 +254,16 @@
         <member name="M:SiliconStudio.Core.IO.FileSystemProvider.FileDelete(System.String)">
             <inheritdoc/>
         </member>
-        <member name="M:SiliconStudio.Core.IO.FileSystemProvider.OpenStream(System.String,SiliconStudio.Core.IO.VirtualFileMode,SiliconStudio.Core.IO.VirtualFileAccess,SiliconStudio.Core.IO.VirtualFileShare,SiliconStudio.Core.IO.StreamFlags)">
-            <inheritdoc/>
-        </member>
-        <member name="M:SiliconStudio.Core.IO.FileSystemProvider.ListFiles(System.String,System.String,SiliconStudio.Core.IO.VirtualSearchOption)">
-            <inheritdoc/>
-        </member>
         <member name="M:SiliconStudio.Core.IO.FileSystemProvider.FileMove(System.String,System.String)">
             <inheritdoc/>
         </member>
         <member name="M:SiliconStudio.Core.IO.FileSystemProvider.FileMove(System.String,SiliconStudio.Core.IO.IVirtualFileProvider,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SiliconStudio.Core.IO.FileSystemProvider.OpenStream(System.String,SiliconStudio.Core.IO.VirtualFileMode,SiliconStudio.Core.IO.VirtualFileAccess,SiliconStudio.Core.IO.VirtualFileShare,SiliconStudio.Core.IO.StreamFlags)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SiliconStudio.Core.IO.FileSystemProvider.ListFiles(System.String,System.String,SiliconStudio.Core.IO.VirtualSearchOption)">
             <inheritdoc/>
         </member>
         <member name="M:SiliconStudio.Core.IO.DriveFileProvider.GetLocalPath(System.String)">

@@ -4709,7 +4709,7 @@
             </summary>
             <param name="vertexArrayObject">The vertex array object.</param>
         </member>
-        <member name="M:SiliconStudio.Paradox.Graphics.GraphicsDevice.SetViewportImpl(System.Int32,SiliconStudio.Paradox.Graphics.Viewport)">
+        <member name="M:SiliconStudio.Paradox.Graphics.GraphicsDevice.SetViewportImpl">
             <summary>
                 Gets or sets the 1st viewport. See <see cref="!:Render+states"/> to learn how to use it.
             </summary>

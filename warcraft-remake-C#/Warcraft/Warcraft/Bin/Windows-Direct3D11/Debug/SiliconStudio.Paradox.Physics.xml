@@ -193,7 +193,7 @@
         </member>
         <member name="P:SiliconStudio.Paradox.Physics.PhysicsElement.Type">
             <userdoc>
-            The physics type of this element. 
+            The physics type of this element.
             </userdoc>
         </member>
         <member name="P:SiliconStudio.Paradox.Physics.PhysicsElement.Shape">
@@ -1423,6 +1423,14 @@
             </summary>
             <value>
             The mass.
+            </value>
+        </member>
+        <member name="P:SiliconStudio.Paradox.Physics.RigidBody.ColliderShape">
+            <summary>
+            Gets the collider shape.
+            </summary>
+            <value>
+            The collider shape.
             </value>
         </member>
         <member name="P:SiliconStudio.Paradox.Physics.RigidBody.AngularDamping">

@@ -1,0 +1,92 @@
+[Router]: Info: Start to listen on port 31244
+[Router]: Info: Client 127.0.0.1:51131 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51130 connected, with message ClientRequestServer
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Info: Process started
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: Process started
+[Router]: Info: Client 127.0.0.1:51133 connected, with message ServiceProvideServer
+[Router]: Info: Client 127.0.0.1:51134 connected, with message ServiceProvideServer
+[Router]: Info: Client 127.0.0.1:51135 connected, with message ServerStarted
+[Router]: Info: Client 127.0.0.1:51136 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[Router]: Info: Client 127.0.0.1:51131 disconnected with exception: Server could not connect back in time
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error: 
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error: Unhandled Exception: System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    --- End of inner exception stack trace ---
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.IO.Stream.<BeginEndReadAsync>b__e(Stream stream, IAsyncResult asyncResult)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Threading.Tasks.TaskFactory`1.FromAsyncTrimPromise`1.Complete(TInstance thisRef, Func`3 endMethod, IAsyncResult asyncResult, Boolean requiresSynchronization)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error: --- End of stack trace from previous location where exception was thrown ---
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at SiliconStudio.Paradox.Engine.Network.SocketExtensions.<ReadAllAsync>d__0.MoveNext()
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error: --- End of stack trace from previous location where exception was thrown ---
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at SiliconStudio.Paradox.Engine.Network.SocketExtensions.<ReadInt16Async>d__10.MoveNext()
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error: --- End of stack trace from previous location where exception was thrown ---
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at SiliconStudio.Paradox.ConnectionRouter.RouterServiceServer.<>c__DisplayClass6.<<CreateSocketContext>b__4>d__d.MoveNext()
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error: --- End of stack trace from previous location where exception was thrown ---
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<ThrowAsync>b__5(Object state)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Threading.ThreadPoolWorkQueue.Dispatch()
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error:    at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Info: 
+[SiliconStudio.Paradox.EffectCompilerServer:8836]: Error: 
+[Router]: Info: Client 127.0.0.1:51130 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51150 connected, with message ClientRequestServer
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[Router]: Info: Client 127.0.0.1:51151 connected, with message ServerStarted
+[Router]: Info: Client 127.0.0.1:51154 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51155 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: Client connected
+[Router]: Info: Client 127.0.0.1:51154 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51156 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51157 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: Client connected
+[Router]: Info: Client 127.0.0.1:51156 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51372 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51373 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: Client connected
+[Router]: Info: Client 127.0.0.1:51372 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51150 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51413 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51414 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[Router]: Info: Client 127.0.0.1:51456 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51457 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: Client connected
+[Router]: Info: Client 127.0.0.1:51456 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51413 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51486 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51488 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[Router]: Info: Client 127.0.0.1:51487 connected, with message ClientRequestServer
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[Router]: Info: Client 127.0.0.1:51489 connected, with message ServerStarted
+[Router]: Info: Client 127.0.0.1:51647 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51648 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51649 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[Router]: Info: Client 127.0.0.1:51650 connected, with message ServerStarted
+[Router]: Info: Client 127.0.0.1:51666 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51667 connected, with message ClientRequestServer
+[Router]: Info: Client 127.0.0.1:51668 connected, with message ServerStarted
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[SiliconStudio.Paradox.EffectCompilerServer:7644]: Info: GameStudio mode started!
+[Router]: Info: Client 127.0.0.1:51669 connected, with message ServerStarted
+[Router]: Info: Client 127.0.0.1:51667 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51666 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51647 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51647 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
+[Router]: Info: Client 127.0.0.1:51648 disconnected with exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
